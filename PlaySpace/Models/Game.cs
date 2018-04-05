@@ -13,7 +13,7 @@ namespace PlaySpace.Models
         [Required(ErrorMessage = "Пожалуйста, введите название игра")]
         public String Name { get; set; }
         [Display(Name = "Категория")]
-        [Required(ErrorMessage = "Пожалуйста, укажите жанр игры")]
+        [Required(ErrorMessage = "Пожалуйста, укажите категорию игры")]
         public string Category { get; set; }
         [Display(Name = "Описание")]
         [Required(ErrorMessage = "Пожалуйста, введите описание игры")]
@@ -22,7 +22,7 @@ namespace PlaySpace.Models
         [Range(0.01, double.MaxValue, ErrorMessage = "Пожалуйста, введите положительное значение для цены")]
         public decimal Price { get; set; }
         [Display(Name = "Скидка")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Пожалуйста, введите положительное или нулевое значение для скидки")]
+        [Range(0, 100, ErrorMessage = "Пожалуйста, введите положительное или нулевое значение для скидки")]
         public int Discount { get; set; }
         public byte[] Image { get; set; }
         public byte[] File { get; set; }

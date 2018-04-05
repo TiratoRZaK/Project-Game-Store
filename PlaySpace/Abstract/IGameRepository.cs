@@ -10,7 +10,7 @@ namespace PlaySpace.Abstract
     public interface IGameRepository
     {
         IEnumerable<Game> Games { get; }
-        void SaveProduct(Game game);
-        Game DeleteProduct(int gameId);
+        void SaveGame(Game game);
+        Game DeleteGame(int gameId);
     }
 }
