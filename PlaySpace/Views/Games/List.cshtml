@@ -1,0 +1,29 @@
+﻿@using PlaySpace.Models
+@using PlaySpace.HtmlHelpers
+@model GameListViewModel
+
+<div class="sorting center">
+    <ul class="s-category clearfix">
+        @Html.Action("Menu", "Nav")
+    </ul>
+    <div class="s-list">
+        @Html.ActionLink("Цена ↑", "List", "Games", new { category = Model.CurrentCategory, sort = 0 }, new { style = "float:right;", @class = "sort" })
+        @Html.ActionLink("Цена ↓", "List", "Games", new { category = Model.CurrentCategory, sort = 1 }, new { style = "float:right;", @class = "sort" })
+    </div>
+</div>
+<div class="middle center clearfix">
+    <div class="sidebar"></div>
+    <div class="content clearfix">
+        <div class="product-catalog clearfix">
+            @foreach (var p in @Model.Games)
+            {
+                @Html.Partial("GameSummary", p)
+            }
+        </div>
+    </div>
+    <br />
+    <div id="page">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+              new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model PlaySpace.Models.Game
+
+<div class="products">
+    <div class="p-img">
+        <a href="#"><img src="~/Content/Images/gta5.png" alt="" /></a>
+    </div>
+    <div class="p-footer">
+        <h6><a href="#">@Model.Name</a></h6>
+        <p><strong>@Model.Discription</strong></p>
+
+        <div class="p-footer-price clearfix">
+            @if (Model.Discount != 0)
+            {
+                <span class="price-lg">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
+                <span class="discount">@(Model.Discount)%</span>
+            }
+            else
+            {
+                <span class="price">@Model.Price.ToString("# руб")</span>
+            }
+                @using (Html.BeginForm("AddToCart", "Cart"))
+                {
+                    <div class="add-cart right">
+                        @Html.HiddenFor(x => x.GameId)
+                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                        <input type="submit" value="В корзину" />
+                    </div>
+                }
+           
+        </div>
+    </div>
+</div>
