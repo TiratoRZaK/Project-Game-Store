@@ -1,12 +1,15 @@
-﻿using PlaySpace.Abstract;
-using System;
+﻿using System;
+using System.Net.Mime;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
+using System.IO;
 using System.Web;
+using PlaySpace.Abstract;
+using PlaySpace.Models;
 
 namespace PlaySpace.Models
 {
@@ -18,9 +21,7 @@ namespace PlaySpace.Models
         public string Username = "vip.ra.1999@gmail.com";
         public string Password = "ruslanruslan132";
         public string ServerName = "smtp.gmail.com";
-        public bool WriteAsFile = true;
         public int ServerPort = 587;
-        public string FileLocation = @"C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\Emails";
     }
 
     public class EmailOrderProcessor : IOrderProcessor
@@ -42,14 +43,8 @@ namespace PlaySpace.Models
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials
                     = new NetworkCredential(emailSettings.Username, emailSettings.Password);
-                if (emailSettings.WriteAsFile)
-                {
-                    smtpClient.DeliveryMethod = SmtpDeliveryMethod.SpecifiedPickupDirectory;
-                    smtpClient.PickupDirectoryLocation = emailSettings.FileLocation;
-                    smtpClient.EnableSsl = false;
-                }
 
-
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
                 StringBuilder body = new StringBuilder()
                     .AppendLine("Здравствуйте, " + shippingInfo.Name + ". Ваш заказ:")
@@ -69,16 +64,15 @@ namespace PlaySpace.Models
 
                 MailMessage mailMessage = new MailMessage(
                                        emailSettings.MailFromAddress,	// От кого
-                                        emailSettings.MailToAddress,		// Кому
+                                       shippingInfo.Email,		// Кому
                                        "Заказ доставлен!",		// Тема
                                        body.ToString());            // Тело письма
 
-                if (emailSettings.WriteAsFile)
+                foreach (var line in cart.Lines)
                 {
-                    mailMessage.BodyEncoding = Encoding.UTF8;
+                    Attachment a = new Attachment(new MemoryStream(line.Game.File), line.Game.Name + ".torrent");
+                    mailMessage.Attachments.Add(a);
                 }
-
-
                 smtpClient.Send(mailMessage);
             }
         }
