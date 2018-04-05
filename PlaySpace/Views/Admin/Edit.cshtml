@@ -1,9 +1,10 @@
 ﻿@model PlaySpace.Models.Game
 
-
 @{
     ViewBag.Title = "Админ панель: редактирование товара";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    HtmlHelper.ClientValidationEnabled = false;
+    HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
 }
 
 <div class="panel">
@@ -24,12 +25,12 @@
                         @if (property.PropertyName == "Description")
                         {
                             @Html.TextArea(property.PropertyName, null,
-                                     new { @class = "form-control", rows = 5 })
+                                          new { @class = "form-control", rows = 5 })
                         }
                         else
                         {
                             @Html.TextBox(property.PropertyName, null,
-                                     new { @class = "form-control" })
+                                          new { @class = "form-control" })
                         }
                         @Html.ValidationMessage(property.PropertyName)
                     </div>
