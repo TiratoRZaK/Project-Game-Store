@@ -21,8 +21,8 @@ namespace PlaySpace.Models
         [Display(Name = "Цена (в рублях)")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Пожалуйста, введите положительное значение для цены")]
         public decimal Price { get; set; }
-        [Display(Name = "Цена (в рублях)")]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Пожалуйста, введите положительное значение для скидки")]
+        [Display(Name = "Скидка")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Пожалуйста, введите положительное или нулевое значение для скидки")]
         public int Discount { get; set; }
         public byte[] Image { get; set; }
         public byte[] File { get; set; }
