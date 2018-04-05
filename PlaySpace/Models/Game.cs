@@ -24,8 +24,11 @@ namespace PlaySpace.Models
         [Display(Name = "Скидка")]
         [Range(0, 100, ErrorMessage = "Пожалуйста, введите положительное или нулевое значение для скидки")]
         public int Discount { get; set; }
-        public byte[] Image { get; set; }
-        public byte[] File { get; set; }
+        public byte[] ImageData { get; set; }
+        public string ImageMimeType { get; set; }
+        [Display(Name = "File")]
+        [Required(ErrorMessage = "Пожалуйста, введите ссылку для скачивания")]
+        public string File { get; set; }
 
     }
 }

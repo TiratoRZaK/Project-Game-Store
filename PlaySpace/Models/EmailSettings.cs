@@ -52,7 +52,7 @@ namespace PlaySpace.Models
 
                 foreach (var line in cart.Lines)
                 {
-                    var subtotal = line.Game.Price * line.Quantity;
+                    var subtotal = (line.Game.Price / 100 * (100 - line.Game.Discount)) * line.Quantity;
                     body.AppendFormat("{0} x {1} (итого: {2:c})",
                         line.Quantity, line.Game.Name, subtotal)
                         .AppendLine();
@@ -61,18 +61,18 @@ namespace PlaySpace.Models
                 body.AppendFormat("Общая стоимость: {0:c}", cart.ComputeTotalValue())
                     .AppendLine()
                     .AppendLine("---");
-
+                
+                foreach (var line in cart.Lines)
+                {
+                    body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, line.Game.File);
+                    body.AppendLine();
+                }
+                body.AppendLine("Спасибо за покупку! :)");
                 MailMessage mailMessage = new MailMessage(
                                        emailSettings.MailFromAddress,	// От кого
                                        shippingInfo.Email,		// Кому
                                        "Заказ доставлен!",		// Тема
                                        body.ToString());            // Тело письма
-
-                foreach (var line in cart.Lines)
-                {
-                    Attachment a = new Attachment(new MemoryStream(line.Game.File), line.Game.Name + ".torrent");
-                    mailMessage.Attachments.Add(a);
-                }
                 smtpClient.Send(mailMessage);
             }
         }

@@ -67,22 +67,7 @@ namespace PlaySpace.Controllers
 
             if (game != null)
             {
-                return File(game.Image, "jpg");
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public FileContentResult GetTorrent(int gameId)
-        {
-            Game game = repository.Games
-                .FirstOrDefault(g => g.GameId == gameId);
-
-            if (game != null)
-            {
-                return File(game.File, "torrent");
+                return File(game.ImageData, game.ImageMimeType);
             }
             else
             {

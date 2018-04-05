@@ -36,7 +36,9 @@ namespace PlaySpace.Models
                     dbEntry.Discription = game.Discription;
                     dbEntry.Price = game.Price;
                     dbEntry.Discount = game.Discount;
-                    dbEntry.Image = game.Image;
+                    dbEntry.ImageData = game.ImageData;
+                    dbEntry.ImageMimeType = game.ImageMimeType;
+                    dbEntry.File = game.File;
                 }
             }
             context.SaveChanges();

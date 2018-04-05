@@ -1,9 +1,18 @@
 ﻿@model PlaySpace.Models.Game
 
 <div class="products">
-    <div class="p-img">
-        <a href="#"><img src="~/Content/Images/gta5.png" alt="" /></a>
-    </div>
+    @if (Model.ImageData == null)
+    {
+        <div class="p-img">
+            <a href="#"><img src="~/Content/Images/no.png" alt="" /></a>
+        </div>
+    }
+    else
+    {
+        <div class="p-img">
+            <a href="#"><img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt=""/></a>
+        </div>
+    }
     <div class="p-footer">
         <h6><a href="#">@Model.Name</a></h6>
         <p><strong>@Model.Discription</strong></p>
@@ -18,15 +27,15 @@
             {
                 <span class="price">@Model.Price.ToString("# руб")</span>
             }
-                @using (Html.BeginForm("AddToCart", "Cart"))
-                {
-                    <div class="add-cart right">
-                        @Html.HiddenFor(x => x.GameId)
-                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                        <input type="submit" value="В корзину" />
-                    </div>
-                }
-           
+            @using (Html.BeginForm("AddToCart", "Cart"))
+            {
+                <div class="add-cart right">
+                    @Html.HiddenFor(x => x.GameId)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" value="В корзину" />
+                </div>
+            }
+
         </div>
     </div>
 </div>
