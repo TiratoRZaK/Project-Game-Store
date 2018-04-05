@@ -1,5 +1,7 @@
 ﻿using Ninject;
 using PlaySpace.Abstract;
+using PlaySpace.Infrastructure.Abstract;
+using PlaySpace.Infrastructure.Concrete;
 using PlaySpace.Models;
 using System;
 using System.Collections.Generic;
@@ -33,12 +35,11 @@ namespace PlaySpace.Infrastructure
         {
             kernel.Bind<IGameRepository>().To<EFGameRepository>();
 
-
-
             EmailSettings emailSettings = new EmailSettings();//Регистрация реализации обработчика заказов
 
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);//Регистрация реализации обработчика заказов
+            kernel.Bind<IAuthProvider>().To<FormAuthProvider>();
         }
     }
 }
