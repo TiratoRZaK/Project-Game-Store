@@ -1,15 +1,7 @@
-﻿using System;
-using System.Net.Mime;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using System.Net;
 using System.Net.Mail;
-using System.IO;
-using System.Web;
 using PlaySpace.Abstract;
-using PlaySpace.Models;
 
 namespace PlaySpace.Models
 {
@@ -64,8 +56,9 @@ namespace PlaySpace.Models
                 
                 foreach (var line in cart.Lines)
                 {
-                    body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, line.Game.File);
+                    body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, line.Game.ActiveKey);
                     body.AppendLine();
+
                 }
                 body.AppendLine("Спасибо за покупку! :)");
                 MailMessage mailMessage = new MailMessage(

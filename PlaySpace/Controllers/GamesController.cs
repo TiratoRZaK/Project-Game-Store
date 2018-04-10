@@ -31,7 +31,7 @@ namespace PlaySpace.Controllers
                         ItemsPerPage = pageSize,
                         TotalItems = category == null ?
                         repository.Games.Count() :
-                        repository.Games.Where(Product => Product.Category == category).Count()
+                        repository.Games.Where(Game => Game.Category == category).Count()
                     },
                     CurrentCategory = category,
                     CurrentSort = sort
@@ -52,7 +52,7 @@ namespace PlaySpace.Controllers
                         ItemsPerPage = pageSize,
                         TotalItems = category == null ?
                         repository.Games.Count() :
-                        repository.Games.Where(Product => Product.Category == category).Count()
+                        repository.Games.Where(Game => Game.Category == category).Count()
                     },
                     CurrentCategory = category,
                     CurrentSort = sort
@@ -60,6 +60,22 @@ namespace PlaySpace.Controllers
             }
             return View(model);
         }
+
+        public ActionResult Action()
+        {
+            int max = 0;
+            foreach(var g in repository.Games)
+            {
+                if (g.Discount > max) max = g.Discount;
+            }
+            Game game = repository.Games
+                .FirstOrDefault(s => s.Discount == max);
+            return View(game);
+        }
+
+        
+
+
         public FileContentResult GetImage(int gameId)
         {
             Game game = repository.Games
@@ -79,6 +95,5 @@ namespace PlaySpace.Controllers
         {
             return PartialView("Discount");
         }
-        
     }
 }

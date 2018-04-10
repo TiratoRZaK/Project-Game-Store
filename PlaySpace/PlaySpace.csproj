@@ -115,25 +115,25 @@
     <Content Include="App_Data\Images\xcom2.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\back.png" />
+    <Content Include="Content\Images\backf.jpg" />
     <Content Include="Content\Images\background.png" />
     <Content Include="Content\Images\basket.png" />
-    <Content Include="Content\Images\gta5.png" />
+    <Content Include="Content\Images\down.png" />
     <Content Include="Content\Images\home.png" />
-    <Content Include="Content\Images\left-back.png" />
+    <Content Include="Content\Images\iron2.png" />
     <Content Include="Content\Images\logo.png" />
-    <Content Include="Content\Images\mafia2.PNG" />
-    <Content Include="Content\Images\right-back.png" />
-    <Content Include="Content\Images\social.png" />
-    <Content Include="Content\Images\sort1.png" />
-    <Content Include="Content\Images\sort2.png" />
-    <Content Include="Content\Images\top-back.png" />
-    <Content Include="Content\Images\top.png" />
-    <Content Include="Content\Images\xcom2.png" />
+    <Content Include="Content\Images\met.png" />
+    <Content Include="Content\Images\new-back.png" />
+    <Content Include="Content\Images\ramka.png" />
+    <Content Include="Content\Images\sidebar.png" />
+    <Content Include="Content\Images\sorting.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\11729.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -196,6 +196,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Games\Action.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

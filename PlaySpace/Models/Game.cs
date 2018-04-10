@@ -26,9 +26,8 @@ namespace PlaySpace.Models
         public int Discount { get; set; }
         public byte[] ImageData { get; set; }
         public string ImageMimeType { get; set; }
-        [Display(Name = "File")]
-        [Required(ErrorMessage = "Пожалуйста, введите ссылку для скачивания")]
-        public string File { get; set; }
-
+        [Display(Name = "Ключ")]
+        [Required(ErrorMessage = "Пожалуйста, введите новый ключ для игры")]
+        public string ActiveKey { get; set; }
     }
 }

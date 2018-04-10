@@ -1,0 +1,440 @@
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\PlaySpace.dll.config
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\PlaySpace.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\csc.exe
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\csc.exe.config
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\csc.rsp
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\csi.exe
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\csi.exe.config
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\csi.rsp
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.AppContext.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Console.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.IO.Compression.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.IO.Pipes.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.Claims.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Threading.Thread.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.ValueTuple.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\vbc.exe
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\vbc.exe.config
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\vbc.rsp
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Helpers.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Razor.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Webpages.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Razor.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Webpages.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Helpers.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\System.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\ru\System.Web.Razor.resources.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.resources.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Deployment.resources.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CoreCompileInputs.cache
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\obj\Debug\PlaySpace.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\obj\Debug\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\EntityFramework.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\EntityFramework.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Ninject.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Ninject.Web.Common.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\WebActivatorEx.dll
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Ninject.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Ninject.Web.Common.xml
+C:\Users\RK-PC\Desktop\Последняя версия\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CoreCompileInputs.cache
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.pdb
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\PlaySpace.dll.config
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\PlaySpace.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\PlaySpace.pdb
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\csc.exe
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\csc.exe.config
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\csc.rsp
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\csi.exe
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\csi.exe.config
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\csi.rsp
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.AppContext.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Console.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.Compression.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Claims.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.ValueTuple.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\vbc.exe
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\vbc.exe.config
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\vbc.rsp
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Ninject.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Common.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Helpers.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Mvc.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Razor.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\WebActivatorEx.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Ninject.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Common.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Razor.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Helpers.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\System.Web.Mvc.xml
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Razor.resources.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.resources.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\Денис\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\PlaySpace.dll.config
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\PlaySpace.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\csc.exe
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\csc.exe.config
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\csc.rsp
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\csi.exe
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\csi.exe.config
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\csi.rsp
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.AppContext.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Console.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.Compression.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.IO.Pipes.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Claims.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Threading.Thread.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.ValueTuple.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\vbc.exe
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\vbc.exe.config
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\vbc.rsp
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Ninject.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Common.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Helpers.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Razor.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\WebActivatorEx.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Ninject.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Common.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Razor.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Helpers.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\System.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Razor.resources.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.resources.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Deployment.resources.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CoreCompileInputs.cache
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.dll
+C:\Users\RK-PC\Desktop\PlaySpace\PlaySpace\obj\Debug\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\PlaySpace.dll.config
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\PlaySpace.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csc.exe
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csc.exe.config
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csc.rsp
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csi.exe
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csi.exe.config
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csi.rsp
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.AppContext.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Console.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.Compression.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.Pipes.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Claims.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Threading.Thread.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.ValueTuple.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\vbc.exe
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\vbc.exe.config
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\vbc.rsp
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Common.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Helpers.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Razor.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\WebActivatorEx.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Common.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Razor.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Helpers.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Razor.resources.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.resources.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Deployment.resources.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CoreCompileInputs.cache
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.dll
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Новая папка\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\PlaySpace.dll.config
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\PlaySpace.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\PlaySpace.pdb
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csc.exe
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csc.exe.config
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csc.rsp
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csi.exe
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csi.exe.config
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\csi.rsp
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.AppContext.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Collections.Immutable.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Console.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.Process.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.Compression.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.IO.Pipes.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Reflection.Metadata.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.AccessControl.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Claims.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Threading.Thread.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.ValueTuple.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\vbc.exe
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\vbc.exe.config
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\vbc.rsp
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\roslyn\VBCSCompiler.exe.config
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Microsoft.Web.Infrastructure.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Common.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Helpers.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Mvc.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Razor.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\WebActivatorEx.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\EntityFramework.SqlServer.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Common.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\Ninject.Web.Mvc.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Razor.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Deployment.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Webpages.Razor.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Helpers.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\System.Web.Mvc.xml
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Razor.resources.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.resources.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Deployment.resources.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CoreCompileInputs.cache
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.dll
+F:\Раб.стол\Учёба\PlaySpace\PlaySpace\PlaySpace\obj\Debug\PlaySpace.pdb

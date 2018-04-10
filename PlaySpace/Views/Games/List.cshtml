@@ -12,7 +12,11 @@
     </div>
 </div>
 <div class="middle center clearfix">
-    <div class="sidebar"></div>
+    <div class="sidebar">
+        <h1>Самое выгодное предложение на сегодня!!!</h1>
+        <img class="s-img" src="~/Content/Images/down.png"/>
+        @Html.Action("Action")
+    </div>
     <div class="content clearfix">
         <div class="product-catalog clearfix">
             @foreach (var p in @Model.Games)
