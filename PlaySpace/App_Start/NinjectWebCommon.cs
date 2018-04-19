@@ -10,6 +10,7 @@ namespace PlaySpace.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using PlaySpace.Infrastructure;
 
     public static class NinjectWebCommon
     {
@@ -54,7 +55,7 @@ namespace PlaySpace.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             System.Web.Mvc.DependencyResolver.SetResolver(new
-                PlaySpace.Infrastructure.NinjectDependencyResolver(kernel));
+                NinjectDependencyResolver(kernel));
         }
     }
 }

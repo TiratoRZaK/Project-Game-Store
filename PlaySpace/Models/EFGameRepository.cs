@@ -7,7 +7,7 @@ namespace PlaySpace.Models
 {
     public class EFGameRepository : IGameRepository
     {
-        GameContext context = new GameContext();
+        UserContext context = new UserContext();
         public Game DeleteGame(int gameId)
         {
             Game dbEntry = context.Games.Find(gameId);

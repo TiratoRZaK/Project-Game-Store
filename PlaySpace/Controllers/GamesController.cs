@@ -1,6 +1,7 @@
 ﻿using PlaySpace.Models;
 using System.Linq;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace PlaySpace.Controllers
 {
@@ -64,7 +65,7 @@ namespace PlaySpace.Controllers
         public ActionResult Action()
         {
             int max = 0;
-            foreach(var g in repository.Games)
+            foreach (var g in repository.Games)
             {
                 if (g.Discount > max) max = g.Discount;
             }
@@ -72,9 +73,6 @@ namespace PlaySpace.Controllers
                 .FirstOrDefault(s => s.Discount == max);
             return View(game);
         }
-
-        
-
 
         public FileContentResult GetImage(int gameId)
         {
@@ -89,11 +87,6 @@ namespace PlaySpace.Controllers
             {
                 return null;
             }
-        }
-
-        public ActionResult Discount()
-        {
-            return PartialView("Discount");
         }
     }
 }

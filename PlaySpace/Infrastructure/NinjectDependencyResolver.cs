@@ -1,12 +1,8 @@
 ﻿using Ninject;
 using PlaySpace.Abstract;
-using PlaySpace.Infrastructure.Abstract;
-using PlaySpace.Infrastructure.Concrete;
 using PlaySpace.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace PlaySpace.Infrastructure
@@ -39,7 +35,6 @@ namespace PlaySpace.Infrastructure
 
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);//Регистрация реализации обработчика заказов
-            kernel.Bind<IAuthProvider>().To<FormAuthProvider>();
         }
     }
 }

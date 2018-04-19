@@ -412,3 +412,35 @@
     border-radius: 15px;
 }
 
+.login {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    margin-right: 150px;
+}
+
+.l-hl {
+    float: left;
+}
+.l-lo {
+    float: right;
+    background-color: darkgreen;
+    border-radius: 10px;
+    border: 6px rgb(18, 104, 51);
+    padding: 4px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+.l-ou {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    float:left;
+}
+.l-out {
+    float: right;
+    background-color: darkgreen;
+    border-radius: 10px;
+    border: 6px rgb(18, 104, 51);
+    padding: 4px;
+    color: #fff;
+    margin-left: 30px;
+}

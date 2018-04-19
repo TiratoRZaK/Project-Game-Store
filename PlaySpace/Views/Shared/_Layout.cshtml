@@ -14,7 +14,7 @@
 <body>
     <div id="wrapper">
         <div class="panel-top">
-            <div class="center clearfix">
+            <div class="center clearfix"> 
                 <div class="basket">
                     <a href="/Cart/Index" class=""<span> Корзина(@Html.Action("Summary", "Cart")) </span></a>
                 </div>
@@ -29,15 +29,18 @@
             </div>
             <ul class="nav right clearfix">
                 <li><a href="/Games/List">Каталог</a></li>
-                <li><a href="/Account/Login">Админ панель</a></li>
             </ul>
         </div>
         <div id="home">
             <div class="home-bg">
                 <div class="center">
                     <a href="/" class="link-home"></a>
+                    <div class="login clearfix">
+                        @Html.Partial("_LoginPartial")
+                    </div>
                     <h2 class="title-home">Твоё любимое пространство</h2>
                 </div>
+
             </div>
         </div>
         @RenderBody()

@@ -1,46 +1,88 @@
-﻿using PlaySpace.Infrastructure.Abstract;
-using PlaySpace.Models;
-using System;
-using System.Collections.Generic;
+﻿using PlaySpace.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace PlaySpace.Controllers
 {
     public class AccountController : Controller
     {
-        IAuthProvider authProvider;
-        public AccountController(IAuthProvider auth)
-        {
-            authProvider = auth;
-        }
-
-        public ViewResult Login()
+        public ActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Login(LoginViewModel model, string returnUrl)
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(LoginModel model)
         {
-
             if (ModelState.IsValid)
             {
-                if (authProvider.Authenticate(model.UserName, model.Password))
+                //поиск пользователя в бд
+                User user = null;
+                using (UserContext db = new UserContext())
                 {
-                    return Redirect(returnUrl ?? Url.Action("Index", "Admin"));
+                    user = db.Users.FirstOrDefault(u => u.Email == model.Name && u.Password == model.Password);
+                }
+                if (user != null)
+                {
+                    FormsAuthentication.SetAuthCookie(model.Name, true);
+                    return RedirectToAction("List", "Games");
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Неправильный логин или пароль");
-                    return View();
+                    ModelState.AddModelError("", "Пользователя с таким логином и паролем не существует!");
                 }
             }
-            else
+            return View(model);
+        }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterModel model)
+        {
+            if(ModelState.IsValid)
             {
-                return View();
+                User user = null;
+                using (UserContext db = new UserContext())
+                {
+                    user = db.Users.FirstOrDefault(u => u.Email == model.Name);
+                }
+                if(user == null)
+                {
+                    //создание нового пользователя
+                    using (UserContext db = new UserContext())
+                    {
+                        db.Users.Add(new Models.User { Email = model.Name, Password = model.Password, Age = model.Age, RoleId = 2});
+                        db.SaveChanges();
+
+                        user = db.Users.Where(u => u.Email == model.Name && u.Password == model.Password).FirstOrDefault();
+                    }
+                    //если пользователь удачно добавлен в бд
+                    if(user != null)
+                    {
+                        FormsAuthentication.SetAuthCookie(model.Name, true);
+                        return RedirectToAction("List", "Games");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Пользователь с таким логином уже существует!");
+                }
             }
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect("~");
         }
     }
 }

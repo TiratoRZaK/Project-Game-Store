@@ -14,9 +14,5 @@ namespace PlaySpace.Models
         [Required(ErrorMessage = "Укажите ваш email")]
         [Display(Name = "Email")]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "Укажите ваш реальный возраст")]
-        [Display(Name = "Возраст")]
-        public string Age { get; set; }
     }
 }
