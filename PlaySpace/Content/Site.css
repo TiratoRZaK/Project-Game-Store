@@ -413,16 +413,15 @@
 }
 
 .login {
+    float: right;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
-    margin-right: 150px;
+    margin-top: -60px;
 }
 
 .l-hl {
-    float: left;
 }
 .l-lo {
-    float: right;
     background-color: darkgreen;
     border-radius: 10px;
     border: 6px rgb(18, 104, 51);
@@ -433,14 +432,36 @@
 .l-ou {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 17px;
-    float:left;
+
 }
 .l-out {
-    float: right;
+
     background-color: darkgreen;
     border-radius: 10px;
     border: 6px rgb(18, 104, 51);
     padding: 4px;
     color: #fff;
     margin-left: 30px;
+}
+
+.acc {    
+    float: right;
+    padding: 4px;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.p-t-acc {
+    background-color: darkgreen;
+    border-radius: 10px;
+    border: 6px rgb(18, 104, 51);
+    padding: 4px;
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+.c-w {
+    color: white;
+    font-size: 21px;
 }

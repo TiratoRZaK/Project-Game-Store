@@ -14,9 +14,15 @@
 <body>
     <div id="wrapper">
         <div class="panel-top">
-            <div class="center clearfix"> 
+            <div class="center clearfix">
                 <div class="basket">
                     <a href="/Cart/Index" class=""<span> Корзина(@Html.Action("Summary", "Cart")) </span></a>
+                </div>
+                <div class="acc">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <a href="/Account/Register" class="p-t-acc">Зарегистрироваться</a>
+                    }
                 </div>
             </div>
         </div>
@@ -29,16 +35,19 @@
             </div>
             <ul class="nav right clearfix">
                 <li><a href="/Games/List">Каталог</a></li>
+                @if (User.IsInRole("admin"))
+                {
+                    <li><a href="/Admin/Index">Админ-панель</a></li>
+                }
             </ul>
         </div>
         <div id="home">
             <div class="home-bg">
                 <div class="center">
-                    <a href="/" class="link-home"></a>
-                    <div class="login clearfix">
+                    <h2 class="title-home">Твоё любимое пространство</h2>
+                    <div class="login">
                         @Html.Partial("_LoginPartial")
                     </div>
-                    <h2 class="title-home">Твоё любимое пространство</h2>
                 </div>
 
             </div>
