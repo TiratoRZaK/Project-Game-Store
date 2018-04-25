@@ -29,7 +29,7 @@ namespace PlaySpace.Models
                 context.Games.Add(game);
             else
             {
-                Game dbEntry = context.Games.Find(game.GameId);
+                Game dbEntry = context.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == game.GameId);
                 if (dbEntry != null)
                 {
                     dbEntry.Name = game.Name;
@@ -38,7 +38,15 @@ namespace PlaySpace.Models
                     dbEntry.Discount = game.Discount;
                     dbEntry.ImageData = game.ImageData;
                     dbEntry.ImageMimeType = game.ImageMimeType;
-                    dbEntry.ActiveKey = game.ActiveKey;
+                    if ((dbEntry.Keys.FirstOrDefault(p=>p.Item == game.ActiveKey) == null)&&(dbEntry.ActiveKey!=game.ActiveKey))
+                    {
+                        dbEntry.Keys.Add(new Key
+                        {
+                            Item = game.ActiveKey,
+                            GameId = game.GameId
+                        });
+                    }
+                    
                 }
             }
             context.SaveChanges();

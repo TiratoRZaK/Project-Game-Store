@@ -613,8 +613,8 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Webpa
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csproj.CoreCompileInputs.cache
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache

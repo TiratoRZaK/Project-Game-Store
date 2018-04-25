@@ -26,8 +26,10 @@ namespace PlaySpace.Models
         public int Discount { get; set; }
         public byte[] ImageData { get; set; }
         public string ImageMimeType { get; set; }
-        [Display(Name = "Ключ")]
+        [Display(Name = "Активный ключ, введите новый ключ для добавления")]
         [Required(ErrorMessage = "Пожалуйста, введите новый ключ для игры")]
         public string ActiveKey { get; set; }
+     
+        public ICollection<Key> Keys { get; set; } 
     }
 }
