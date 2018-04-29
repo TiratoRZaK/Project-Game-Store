@@ -38,6 +38,7 @@ namespace PlaySpace.Models
                     dbEntry.Discount = game.Discount;
                     dbEntry.ImageData = game.ImageData;
                     dbEntry.ImageMimeType = game.ImageMimeType;
+                    dbEntry.Category = game.Category;
                     if ((dbEntry.Keys.FirstOrDefault(p=>p.Item == game.ActiveKey) == null)&&(dbEntry.ActiveKey!=game.ActiveKey))
                     {
                         dbEntry.Keys.Add(new Key

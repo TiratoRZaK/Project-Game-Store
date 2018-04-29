@@ -63,8 +63,8 @@ namespace PlaySpace.Models
                         using (UserContext db = new UserContext())
                         {
                             Game dbEntry = db.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == line.Game.GameId);
-                            dbEntry.ActiveKey = db.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
                             body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, dbEntry.ActiveKey);
+                            dbEntry.ActiveKey = db.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
                             Key delkey = db.Keys.FirstOrDefault(p => p.Item == dbEntry.ActiveKey);
                             db.Keys.Remove(delkey);
                             db.SaveChanges();

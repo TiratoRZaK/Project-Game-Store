@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlaySpace.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,11 +18,11 @@ namespace PlaySpace.Controllers
 
         public PartialViewResult Menu(string category = null)
         {
-            IEnumerable<string> categories = repository.Games
-                .Select(game => game.Category)
+            IEnumerable<string> game = repository.Games
+                .Select(item => item.Category)
                 .Distinct()
                 .OrderBy(x => x);
-            return PartialView(categories);
+            return PartialView(game);
         }
     }
 }

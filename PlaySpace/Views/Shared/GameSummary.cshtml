@@ -17,7 +17,7 @@
         <h6><a href="#">@Model.Name</a></h6>
         <p><strong>@Model.Discription</strong></p>
 
-        <div class="p-footer-price clearfix">
+        <div class="p-footer-price">
             @if (Model.Discount != 0)
             {
                 <span class="price-lg">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
