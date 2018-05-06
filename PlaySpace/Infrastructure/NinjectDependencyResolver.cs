@@ -29,7 +29,6 @@ namespace PlaySpace.Infrastructure
 
         private void AddBindings()
         {
-            kernel.Bind<IGameRepository>().To<EFGameRepository>();
 
             EmailSettings emailSettings = new EmailSettings();//Регистрация реализации обработчика заказов
 

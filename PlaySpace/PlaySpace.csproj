@@ -123,23 +123,42 @@
     <Content Include="Content\Images\background.png" />
     <Content Include="Content\Images\basket.png" />
     <Content Include="Content\Images\down.png" />
+    <Content Include="Content\Images\futuristic-background-6.jpg" />
+    <Content Include="Content\Images\helldivers.jpg" />
     <Content Include="Content\Images\home.png" />
     <Content Include="Content\Images\iron2.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\met.png" />
     <Content Include="Content\Images\new-back.png" />
+    <Content Include="Content\Images\payday2.png" />
+    <Content Include="Content\Images\portal2.png" />
+    <Content Include="Content\Images\pubg.jpg" />
     <Content Include="Content\Images\ramka.png" />
     <Content Include="Content\Images\sidebar.png" />
+    <Content Include="Content\Images\sims2.jpg" />
+    <Content Include="Content\Images\sims3.png" />
+    <Content Include="Content\Images\Sims4.png" />
     <Content Include="Content\Images\sorting.png" />
+    <Content Include="Content\Images\spore2.jpg" />
+    <Content Include="Content\Images\sr2.png" />
+    <Content Include="Content\Images\sr3.png" />
+    <Content Include="Content\Images\sr4.jpg" />
+    <Content Include="Content\Images\фон.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\11729.ttf" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Content\11764.ttf" />
+    <Content Include="Content\11763.ttf" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -150,13 +169,13 @@
     <Content Include="Views\Games\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IGameRepository.cs" />
     <Compile Include="Abstract\IOrderProcessor.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Global.asax.cs">
@@ -170,7 +189,7 @@
     <Compile Include="Models\Authentication.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
-    <Compile Include="Models\EFGameRepository.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\EmailSettings.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameListViewModel.cs" />
@@ -189,7 +208,6 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Shared\GameSummary.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
@@ -203,6 +221,9 @@
     <Content Include="Views\Games\Action.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

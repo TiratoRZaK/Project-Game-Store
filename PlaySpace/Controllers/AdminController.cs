@@ -1,4 +1,5 @@
 ﻿using PlaySpace.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,21 +9,24 @@ namespace PlaySpace.Controllers
     [Authorize(Roles="admin")]
     public class AdminController : Controller
     {
-        IGameRepository repository;
+        UserContext context = new UserContext();
 
-        public AdminController(IGameRepository repo)
+        public ViewResult Index(int id)
         {
-            repository = repo;
-        }
-
-        public ViewResult Index()
-        {
-            return View(repository.Games);
+            List<Game> gamelist = new List<Game>();
+            foreach(Game game in context.Games)
+            {
+                if (game.CategoryId == id)
+                {
+                    gamelist.Add(game);
+                }
+            }
+            return View(gamelist);
         }
 
         public ViewResult Edit(int gameId)
         {
-            Game game = repository.Games
+            Game game = context.Games
                 .FirstOrDefault(g => g.GameId == gameId);
             return View(game);
         }
@@ -38,13 +42,12 @@ namespace PlaySpace.Controllers
                     game.ImageData = new byte[image.ContentLength];
                     image.InputStream.Read(game.ImageData, 0, image.ContentLength);
                 }                
-                repository.SaveGame(game);
+                context.SaveGame(game);
                 TempData["message"] = string.Format("Изменения в игре \"{0}\" были сохранены", game.Name);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id=game.CategoryId });
             }
             else
             {
-                // Что-то не так со значениями данных
                 return View(game);
             }
         }
@@ -54,16 +57,15 @@ namespace PlaySpace.Controllers
             return View("Edit", new Game());
         }
 
-        [HttpPost]
         public ActionResult Delete(int gameId)
         {
-            Game deletedGame = repository.DeleteGame(gameId);
+            Game deletedGame = context.DeleteGame(gameId);
             if (deletedGame != null)
             {
                 TempData["message"] = string.Format("Игра \"{0}\" была удалена",
                     deletedGame.Name);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { id=deletedGame.CategoryId});
         }
     }
 }

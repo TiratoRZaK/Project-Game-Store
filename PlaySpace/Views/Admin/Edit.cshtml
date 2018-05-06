@@ -23,7 +23,8 @@
                     case "ImageData":
                     case "ImageMimeType":
                     case "Keys":
-             
+                    case "Category":
+
                         // Ничего не делать
                         break;
                     default:
@@ -36,8 +37,15 @@
                             }
                             else
                             {
-                                @Html.TextBox(property.PropertyName, null,
-                                         new { @class = "form-control" })
+                                if(property.PropertyName != "CategoryId")
+                                {
+                                    @Html.TextBox(property.PropertyName, null,
+                                             new { @class = "form-control" })
+                                }
+                                else
+                                {
+
+                                }
                             }
                             @Html.ValidationMessage(property.PropertyName)
                             
@@ -71,11 +79,11 @@
             </div>
         </div>
         <div class="panel-footer">
-            <input type="submit" value="Сохранить" class="btn btn-primary" />
-            @Html.ActionLink("Отменить изменения и вернуться к списку", "Index", null, new
-            {
-                @class = "btn btn-default"
-            })
+            <input type="submit" name="Сохранить изменения" class="btn btn-primary"/>
+            @Html.ActionLink("Отменить изменения и вернуться к списку", "Index","Admin", new { id=Model.CategoryId }, new
+               {
+                   @class = "btn btn-default"
+               })
         </div>
     }
 </div>

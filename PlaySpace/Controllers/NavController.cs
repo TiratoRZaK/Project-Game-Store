@@ -9,17 +9,14 @@ namespace PlaySpace.Controllers
 {
     public class NavController : Controller
     {
-        private IGameRepository repository;
-
-        public NavController(IGameRepository repository)
-        {
-            this.repository = repository;
-        }
+        
 
         public PartialViewResult Menu(string category = null)
         {
-            IEnumerable<string> game = repository.Games
-                .Select(item => item.Category)
+            UserContext context = new UserContext();
+            var games = context.Games.Include(nameof(Category));
+            IEnumerable<string> game = games
+                .Select(item => item.Category.CategoryName)
                 .Distinct()
                 .OrderBy(x => x);
             return PartialView(game);

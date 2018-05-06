@@ -1,16 +1,12 @@
-﻿body {
-    background: url(../Content/Images/backf.jpg) no-repeat center fixed;
-}
-
-.center {
+﻿.center {
     width: 1120px;
     margin: auto;
 }
 
 .panel-top {
     height: 33px;
-    border-top: 3px solid #CC3333;
-    background: #2A2B2C;
+    border-top: 3px solid darkgreen;
+    background: black;
 }
 
 .social a {
@@ -49,7 +45,7 @@
     height: 45px;
     float: right;
     margin-left: 25px;
-    background: #C33 url(../Content/Images/basket.png) no-repeat 5px 7px;
+    background: darkgreen url(../Content/Images/basket.png) no-repeat 5px 7px;
     -webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
@@ -122,18 +118,18 @@
 }
 
 .home-bg {
-    background: #cc3333;
+    background: black;
     padding: 20px 0;
-    box-shadow: inset: 0 5px 5px rgba(0,0,0,.25);
     -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
     -moz-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
     box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
 }
 
 .title-home {
-    color: #fff;
+    color: #00942f;
     text-transform: uppercase;
     text-shadow: 0 1px 1px rgba(0,0,0,.25);
+    font-family: Normas;
     font: 28px,'Oswald', sans-serif;
 }
 
@@ -147,25 +143,39 @@
 }
 
 .sorting {
-    padding: 18px 8px;
-    background: url(../Content/Images/sorting.png) no-repeat;
-    border-radius: 3px;
+    border: 1px solid #000;
+    background: rgb(18, 104, 51);
+    padding: 2px;
+    -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+    -moz-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+    box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
 }
 
 .s-category li {
-    list-style-type: none;
+    display: inline-block;
+    margin-top: 10px;
     float: left;
-    padding: 4px 15px 0 8px;
+    padding: 5px 10px;
+    width: 120px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 1px solid #00942f;
+    border-color: black;
+    margin-left: 7px;
+    -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+    -moz-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+    box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
 }
 
 .s-category a {
-    color: #1E1E20;
+    color: #fff;
     text-transform: uppercase;
 }
 
 .s-category a:hover,
 .s-category li:active a {
-    color: #000;
+    color: #00942f;
 }
 
 .s-list {
@@ -178,8 +188,8 @@
     height: 20px;
 }
 
-.sort {
-    display: block;
+.sort-price {
+    margin-top: -18px;
     margin-left: 20px;
 }
 
@@ -192,10 +202,18 @@
     margin-top: 40px;
     float: right;
     padding: 3px;
+    -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+    -moz-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
+    box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
 }
 @font-face {
     font-family: Krut; /* Гарнитура шрифта */
     src: url(/Content/11729.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Normas; /* Гарнитура шрифта */
+    src: url(/Content/11763.ttf); /* Путь к файлу со шрифтом */
 }
 .sidebar h1 {
     font-family: Krut, 'Comic Sans MS', cursive;
@@ -222,13 +240,7 @@
     margin-top: 40px;
 }
 
-.products {
-    float: left;
-    width: 272px;
-    height: 556px;
-    background: url(../Content/Images/ramka.png) no-repeat;
-    overflow: hidden;
-}
+
 
 .s-p-footer-price{
     margin-left: 23px;
@@ -281,8 +293,8 @@
 .products:nth-child(3n) {margin-right: 0; }
 
 .p-img {
-    margin-left: 23px;
-    margin-top: 99px;
+    margin-left: 20px;
+    margin-top: 20px;
     width: 220px;
     height: 220px;
     overflow: hidden;
@@ -291,11 +303,10 @@
     padding: 0 8px 8px 15px;
 }
 
-.products h6 {
-    margin-right: 10px;
+.p-footer h6 {
     text-align: center;
-    font-size: 18px;
-    color: red;
+    font-size: 20px;
+    color: black;
     font-weight: bold;
 }
 
@@ -304,20 +315,20 @@
 }
 
 .p-footer p {
-    height: 90px;
+    margin-top: -10px;
+    font-size: 14px;
+    height: 100px;
     width: 200px;
-    margin-left: 13px;
-    overflow:auto;
+    overflow: hidden;
 }
 
 .p-footer-price {
-    margin-left: 13px;
     margin-top: 10px;
 }
 
 .price-lg {
     color: red;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     font-weight: bold;
     margin-top: 3px;
@@ -327,24 +338,27 @@
     font-weight: bold;
 }
 
-
+.p-footer-price {
+    font-size: 12px;
+}
 .price, .discount {
     display: inline-block;
     font-weight: bold;
     margin-top: 3px;
+
 }
 
 .discount {
     line-height: 16px;
     color: #fff;
     background: #C33;
-    padding: 1px 3px;
+    padding: 1px 1px;
 }
 
 .add-cart {
     float: right;
     padding: 5px 8px;
-    margin-right: 30px;
+    margin-right: 0px;
     margin-top: -23px;
     font-size: 10px;
     color: #fff;
@@ -464,4 +478,97 @@
 .c-w {
     color: white;
     font-size: 21px;
+}
+
+.box-thumb {
+    background: url(../Content/Images/futuristic-background-6.jpg) no-repeat;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    width: 260px;
+    height: 260px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-thumb img {
+    max-width: 220px;
+    height: 220px;
+    display: block;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+.box-thumb:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.box-thumb::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.box-thumb:hover::before {
+    -webkit-animation: shine .85s;
+    animation: shine .85s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+.box-thumb div.descript {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    margin-right: 15px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.5em;
+    font: 300 0.875rem/140% 'Exo 2', Tahoma, Verdana, Segoe, sans-serif;
+    opacity: 0;
+    -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+    transition: opacity 0.7s, transform 0.7s;
+    -webkit-transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.9, 0.9, 1);
+    -webkit-transform: translate3d(-180%, 0, 0);
+    transform: translate3d(-180%, 0, 0);
+    visibility: visible;
+}
+
+.box-thumb:hover div.descript {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.cat-list {
+    margin-left: 10px;
 }

@@ -3,7 +3,8 @@
  * Microsoft grants you the right to use these script files for the sole
  * purpose of either: (i) interacting through your browser with the Microsoft
  * website or online service, subject to the applicable licensing or use
- * terms; or (ii) using the files as included with a Microsoft product subject
+ * terms; or (ii) using the files as included with a Microsoft 
+    t subject
  * to that product's license terms. Microsoft reserves all other rights to the
  * files not expressly granted by Microsoft, whether by implication, estoppel
  * or otherwise. The notices and licenses below are for informational purposes only.
@@ -57,10 +58,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-  background-color: white;
-}
 
 a:focus {
 }
@@ -309,11 +306,12 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: Normas;
+  font-size: 18px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  margin: 0;
+  background: url(../Content/Images/backf.jpg) no-repeat fixed center;
 }
 
 input,
