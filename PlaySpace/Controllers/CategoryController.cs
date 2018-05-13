@@ -28,7 +28,7 @@ namespace PlaySpace.Controllers
             if (ModelState.IsValid)
             {
                 context.SaveCategory(category);
-                TempData["message"] = string.Format("Изменения в категории \"{0}\" были сохранены", category.CategoryName);
+                TempData["message"] = string.Format("Категория \"{0}\" была успешно добавлена", category.CategoryName);
                 return RedirectToAction("Index");
             }
             else
@@ -47,11 +47,6 @@ namespace PlaySpace.Controllers
                     deletedCategory.CategoryName);
             }
             return RedirectToAction("Index");
-        }
-
-        public PartialViewResult List()
-        {
-            return PartialView(context.Categories);
         }
     }
 }

@@ -63,6 +63,7 @@ namespace PlaySpace.Models
                     dbEntry.ImageData = game.ImageData;
                     dbEntry.ImageMimeType = game.ImageMimeType;
                     dbEntry.Category = game.Category;
+                    dbEntry.CategoryId = game.CategoryId;
                     if ((dbEntry.Keys.FirstOrDefault(p => p.Item == game.ActiveKey) == null) && (dbEntry.ActiveKey != game.ActiveKey))
                     {
                         dbEntry.Keys.Add(new Key

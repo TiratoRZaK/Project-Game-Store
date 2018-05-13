@@ -28,7 +28,7 @@ namespace PlaySpace.Models
         public string ActiveKey { get; set; }
      
         public ICollection<Key> Keys { get; set; }
-
+        [Display(Name = "Категория")]
         [Required(ErrorMessage = "Пожалуйста, укажите категорию игры")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }

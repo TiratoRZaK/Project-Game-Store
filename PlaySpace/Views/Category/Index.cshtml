@@ -10,16 +10,14 @@
         <h3>Список категорий</h3>
     </div>
     <div class="panel-body">
-        <table class="table table-striped table-condensed table-bordered">
+        <table class="table table-striped table-condensed table-bordered" style="width: 75%; margin-left: 200px;">
             <tr>
-                <th class="text-right">ID</th>
                 <th>Название</th>
                 <th class="text-center">Действия</th>
             </tr>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td class="text-right">@item.Id</td>
                     <td>@Html.ActionLink(item.CategoryName, "Index", "Admin", new { item.Id }, null)</td>
                     <td class="text-center">
                         @Html.ActionLink("Удалить категорию", "Delete", "Category", new { item.Id }, null)
