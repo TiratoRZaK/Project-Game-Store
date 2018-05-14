@@ -10,11 +10,10 @@ namespace PlaySpace.Controllers
 {
     public class CartController : Controller
     {
-        private IGameRepository repository;
+        UserContext context = new UserContext();
         private IOrderProcessor orderProcessor;
-        public CartController(IGameRepository repository, IOrderProcessor orderProcessor)
+        public CartController(IOrderProcessor orderProcessor)
         {
-            this.repository = repository;
             this.orderProcessor = orderProcessor;
         }
         public Cart GetCart()
@@ -45,9 +44,8 @@ namespace PlaySpace.Controllers
 
         public RedirectToRouteResult AddToCart(int gameId, string returnUrl)
         {
-            Game game = repository.Games
+            Game game = context.Games
                 .FirstOrDefault(g => g.GameId == gameId);
-
             if (game != null)
             {
                 GetCart().AddItem(game, 1);
@@ -57,9 +55,8 @@ namespace PlaySpace.Controllers
 
         public RedirectToRouteResult RemoveFromCart(int gameId, string returnUrl)
         {
-            Game game = repository.Games
+            Game game = context.Games
                 .FirstOrDefault(g => g.GameId == gameId);
-
             if (game != null)
             {
                 GetCart().RemoveLine(game);

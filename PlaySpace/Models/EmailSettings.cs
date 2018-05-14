@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Mail;
 using PlaySpace.Abstract;
+using System.Linq;
 
 namespace PlaySpace.Models
 {
@@ -56,9 +57,23 @@ namespace PlaySpace.Models
                 
                 foreach (var line in cart.Lines)
                 {
-                    body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, line.Game.ActiveKey);
-                    body.AppendLine();
+                    int i = 0;
+                    while (i < line.Quantity)
+                    {
+                        using (UserContext db = new UserContext())
+                        {
+                            Game dbEntry = db.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == line.Game.GameId);
+                            dbEntry.ActiveKey = db.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
+                            body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, dbEntry.ActiveKey);
+                            Key delkey = db.Keys.FirstOrDefault(p => p.Item == dbEntry.ActiveKey);
+                            db.Keys.Remove(delkey);
+                            //dbEntry.ActiveKey = "";
+                            db.SaveChanges();
 
+                        }
+                        body.AppendLine();
+                        i++;
+                    }
                 }
                 body.AppendLine("Спасибо за покупку! :)");
                 MailMessage mailMessage = new MailMessage(

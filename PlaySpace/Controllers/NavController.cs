@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlaySpace.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,20 +9,17 @@ namespace PlaySpace.Controllers
 {
     public class NavController : Controller
     {
-        private IGameRepository repository;
-
-        public NavController(IGameRepository repository)
-        {
-            this.repository = repository;
-        }
+        
 
         public PartialViewResult Menu(string category = null)
         {
-            IEnumerable<string> categories = repository.Games
-                .Select(game => game.Category)
+            UserContext context = new UserContext();
+            var games = context.Games.Include(nameof(Category));
+            IEnumerable<string> game = games
+                .Select(item => item.Category.CategoryName)
                 .Distinct()
                 .OrderBy(x => x);
-            return PartialView(categories);
+            return PartialView(game);
         }
     }
 }

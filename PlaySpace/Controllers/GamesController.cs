@@ -1,4 +1,5 @@
 ﻿using PlaySpace.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -7,22 +8,19 @@ namespace PlaySpace.Controllers
 {
     public class GamesController : Controller
     {
-        private IGameRepository repository;
-        public int pageSize = 9;
+        public int pageSize = 90;
+        UserContext context = new UserContext();
 
-        public GamesController(IGameRepository repository)
-        {
-            this.repository = repository;
-        }
         public ViewResult List(string category, int page = 1, int sort = 1)
         {
             GameListViewModel model;
+
             if (sort == 1)
             {
                 model = new GameListViewModel
                 {
-                    Games = repository.Games
-                .Where(p => category == null || p.Category == category)
+                    Games = context.Games.Include(nameof(Category))
+                .Where(p => category == null || p.Category.CategoryName == category)
                 .OrderByDescending(Game => (Game.Price / 100 * (100 - Game.Discount)))
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize),
@@ -31,19 +29,26 @@ namespace PlaySpace.Controllers
                         CurrentPage = page,
                         ItemsPerPage = pageSize,
                         TotalItems = category == null ?
-                        repository.Games.Count() :
-                        repository.Games.Where(Game => Game.Category == category).Count()
+                        context.Games.Count() :
+                        context.Games.Where(Game => Game.Category.CategoryName == category).Count()
                     },
                     CurrentCategory = category,
                     CurrentSort = sort
                 };
+                foreach(Game t in model.Games)
+                {
+                    if(t.CountKeys <= 0)
+                    {
+                        model.Games = model.Games.Where(m=>m != t);
+                    }
+                }
             }
             else
             {
                 model = new GameListViewModel
                 {
-                    Games = repository.Games
-                .Where(p => category == null || p.Category == category)
+                    Games = context.Games.Include(nameof(Category))
+                .Where(p => category == null || p.Category.CategoryName == category)
                 .OrderBy(Game => (Game.Price / 100 * (100 - Game.Discount)))
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize),
@@ -52,12 +57,19 @@ namespace PlaySpace.Controllers
                         CurrentPage = page,
                         ItemsPerPage = pageSize,
                         TotalItems = category == null ?
-                        repository.Games.Count() :
-                        repository.Games.Where(Game => Game.Category == category).Count()
+                        context.Games.Count() :
+                        context.Games.Where(Game => Game.Category.CategoryName == category).Count()
                     },
                     CurrentCategory = category,
                     CurrentSort = sort
                 };
+                foreach (Game t in model.Games)
+                {
+                    if (t.CountKeys <= 0)
+                    {
+                        model.Games = model.Games.Where(m => m != t);
+                    }
+                }
             }
             return View(model);
         }
@@ -65,18 +77,18 @@ namespace PlaySpace.Controllers
         public ActionResult Action()
         {
             int max = 0;
-            foreach (var g in repository.Games)
+            foreach (var g in context.Games)
             {
                 if (g.Discount > max) max = g.Discount;
             }
-            Game game = repository.Games
+            Game game = context.Games
                 .FirstOrDefault(s => s.Discount == max);
             return View(game);
         }
 
         public FileContentResult GetImage(int gameId)
         {
-            Game game = repository.Games
+            Game game = context.Games
                 .FirstOrDefault(g => g.GameId == gameId);
 
             if (game != null)
