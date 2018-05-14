@@ -32,6 +32,8 @@ namespace PlaySpace.Models
         [Required(ErrorMessage = "Пожалуйста, укажите категорию игры")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        [Display(Name ="Количество ключей в Базе Данных")]
+        public int? CountKeys { get; set; }
 
     }
 }

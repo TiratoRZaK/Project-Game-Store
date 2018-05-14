@@ -60,6 +60,7 @@ namespace PlaySpace.Controllers
         {
             Game game = new Game();
             game.CategoryId = categoryId;
+            game.CountKeys = 1;
             ViewBag.CategoryNewGame = categoryId;
             ViewBag.CatName = context.Categories.FirstOrDefault(m => m.Id == categoryId).CategoryName;
             return View(game);
@@ -77,6 +78,9 @@ namespace PlaySpace.Controllers
                     image.InputStream.Read(game.ImageData, 0, image.ContentLength);
                 }
                 context.Games.Add(game);
+                context.SaveChanges();
+                Game dbEntry = context.Games.Include(nameof(Game.Keys)).FirstOrDefault(m=>m.GameId == game.GameId);
+                dbEntry.Keys.Add(new Key { Item = game.ActiveKey, GameId = game.GameId });
                 context.SaveChanges();
                 TempData["message"] = string.Format("Игра \"{0}\" была сохранена", game.Name);
                 return RedirectToAction("Index", new { id = game.CategoryId });

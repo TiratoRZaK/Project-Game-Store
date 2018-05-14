@@ -1,4 +1,5 @@
 ﻿using PlaySpace.Models;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -34,6 +35,13 @@ namespace PlaySpace.Controllers
                     CurrentCategory = category,
                     CurrentSort = sort
                 };
+                foreach(Game t in model.Games)
+                {
+                    if(t.CountKeys <= 0)
+                    {
+                        model.Games = model.Games.Where(m=>m != t);
+                    }
+                }
             }
             else
             {
@@ -55,6 +63,13 @@ namespace PlaySpace.Controllers
                     CurrentCategory = category,
                     CurrentSort = sort
                 };
+                foreach (Game t in model.Games)
+                {
+                    if (t.CountKeys <= 0)
+                    {
+                        model.Games = model.Games.Where(m => m != t);
+                    }
+                }
             }
             return View(model);
         }

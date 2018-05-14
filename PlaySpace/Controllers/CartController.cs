@@ -46,7 +46,6 @@ namespace PlaySpace.Controllers
         {
             Game game = context.Games
                 .FirstOrDefault(g => g.GameId == gameId);
-
             if (game != null)
             {
                 GetCart().AddItem(game, 1);
@@ -58,7 +57,6 @@ namespace PlaySpace.Controllers
         {
             Game game = context.Games
                 .FirstOrDefault(g => g.GameId == gameId);
-
             if (game != null)
             {
                 GetCart().RemoveLine(game);

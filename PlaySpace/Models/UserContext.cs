@@ -49,30 +49,30 @@ namespace PlaySpace.Models
         public void SaveGame(Game game)
         {
             UserContext context = new UserContext();
-            if (game.GameId == 0)
-                context.Games.Add(game);
-            else
+           
+            Game dbEntry = context.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == game.GameId);
+            if (dbEntry != null)
             {
-                Game dbEntry = context.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == game.GameId);
-                if (dbEntry != null)
-                {
-                    dbEntry.Name = game.Name;
-                    dbEntry.Discription = game.Discription;
-                    dbEntry.Price = game.Price;
-                    dbEntry.Discount = game.Discount;
-                    dbEntry.ImageData = game.ImageData;
-                    dbEntry.ImageMimeType = game.ImageMimeType;
-                    dbEntry.Category = game.Category;
-                    dbEntry.CategoryId = game.CategoryId;
-                    if ((dbEntry.Keys.FirstOrDefault(p => p.Item == game.ActiveKey) == null) && (dbEntry.ActiveKey != game.ActiveKey))
-                    {
-                        dbEntry.Keys.Add(new Key
-                        {
-                            Item = game.ActiveKey,
-                            GameId = game.GameId
-                        });
-                    }
+                dbEntry.Name = game.Name;
+                dbEntry.Discription = game.Discription;
+                dbEntry.Price = game.Price;
+                dbEntry.Discount = game.Discount;
+                dbEntry.ImageData = game.ImageData;
+                dbEntry.ImageMimeType = game.ImageMimeType;
+                dbEntry.Category = game.Category;
+                dbEntry.CategoryId = game.CategoryId;
 
+                if ((dbEntry.Keys.FirstOrDefault(p => p.Item == game.ActiveKey) == null))
+                {
+                    dbEntry.Keys.Add(new Key
+                    {
+                        Item = game.ActiveKey,
+                        GameId = game.GameId
+                    });
+                    if(context.Keys.Where(m=>m.Item == game.ActiveKey).Count() < 1)
+                    {
+                        dbEntry.CountKeys++;
+                    }
                 }
             }
             context.SaveChanges();
