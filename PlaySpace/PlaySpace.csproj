@@ -152,6 +152,7 @@
     <Content Include="Content\11729.ttf" />
     <Content Include="Content\11764.ttf" />
     <Content Include="Content\11763.ttf" />
+    <Content Include="Content\Discript-Discount.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
