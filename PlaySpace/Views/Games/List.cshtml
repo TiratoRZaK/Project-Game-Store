@@ -22,8 +22,8 @@
         <h1>Самое выгодное предложение на сегодня!!!</h1>
         @Html.Action("Action")
     </div>
-    <div class="content clearfix">
-        <div class="product-catalog clearfix">
+    <div class="content clearfix center">
+        <div class="product-catalog center">
             @foreach (var p in @Model.Games)
             {
                 @Html.Partial("GameSummary", p)

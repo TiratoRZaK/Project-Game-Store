@@ -26,7 +26,10 @@ namespace PlaySpace.Controllers
             }
             return cart;
         }
-
+        public ActionResult Completed()
+        {
+            return View();
+        }
         public ViewResult Index(string returnUrl)
         {
             return View(new CartIndexViewModel
@@ -64,7 +67,44 @@ namespace PlaySpace.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        public ViewResult Checkout( ShippingDetails shippingDetails)
+        public Order AddOrder(Cart cart)
+        {
+            UserContext context = new UserContext();
+            int allprice = 0;
+            foreach (var cartline in cart.Lines)
+            {
+                if (cartline.Game.Discount != 0)
+                {
+                    allprice += (int)cartline.Quantity * (int)(cartline.Game.Price * Decimal.Divide(cartline.Game.Discount, 100));
+                }
+                else allprice += (int)cartline.Quantity * (int)cartline.Game.Price;
+            }
+            User dbEntry = context.Users.FirstOrDefault(m=>m.Login == User.Identity.Name);
+            Order order = new Order
+            {
+                Data = DateTime.Now,
+                StatusId = 2,
+                UserId = dbEntry.Id,
+                AllPrice = allprice
+            };
+            context.Orders.Add(order);
+            context.SaveChanges();
+            foreach (CartLine cartline in cart.Lines)
+            {
+                context.OrdGames.Add(new OrdGame { GameId = cartline.Game.GameId, OrderId = order.Id, Quantity = cartline.Quantity });
+                context.SaveChanges();
+            }
+            context.SaveChanges();
+
+            orderProcessor.ProcessOrder(cart, new ShippingDetails
+            {
+                Email = dbEntry.Email,
+                Name = dbEntry.Login
+            }, order);
+            return order;
+        }
+
+        public ActionResult Checkout()
         {
             if (GetCart().Lines.Count() == 0)
             {
@@ -73,13 +113,13 @@ namespace PlaySpace.Controllers
 
             if (ModelState.IsValid)
             {
-                orderProcessor.ProcessOrder(GetCart(), shippingDetails);
+                Order order = AddOrder(GetCart());
                 GetCart().Clear();
-                return View("Completed");
+                return RedirectToAction("Index","Oplata", new { orderId = order.Id });
             }
             else
             {
-                return View(shippingDetails);
+                return View();
             }
         }
     }

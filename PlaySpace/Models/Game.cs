@@ -34,6 +34,7 @@ namespace PlaySpace.Models
         public Category Category { get; set; }
         [Display(Name ="Количество ключей в Базе Данных")]
         public int? CountKeys { get; set; }
+        ICollection<OrdGame> OrdGames { get; set; }
 
     }
 }

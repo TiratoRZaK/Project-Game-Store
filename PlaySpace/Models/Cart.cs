@@ -58,7 +58,6 @@ namespace PlaySpace.Models
         {
             return lineCollection.Sum(e => e.Game.Price / 100 * (100 - e.Game.Discount) * e.Quantity);
         }
-
         public decimal CountTotalValue()
         {
             return TotalQuantity;

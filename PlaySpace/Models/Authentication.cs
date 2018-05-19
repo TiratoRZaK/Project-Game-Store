@@ -9,8 +9,10 @@ namespace PlaySpace.Models
     public class LoginModel
     {
         [Required]
-        public string Name { get; set; }
+        [Display(Name = "Логин")]
+        public string Login { get; set; }
         [Required]
+        [Display(Name = "Пароль")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
@@ -18,10 +20,22 @@ namespace PlaySpace.Models
     public class RegisterModel
     {
         [Required]
-        public string Name { get; set; }
+        [Display(Name = "Логин")]
+        public string Login { get; set; }
         [Required]
+        [Display(Name = "Пароль")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+        [Required]
+        [Display(Name = "Подтвердите пароль")]
+        [DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "Пароли не совпадают")]
+        public string ConfirmPassword { get; set; }
+        [Required]
+        [Display(Name = "Возраст")]
         public int Age { get; set; }
-
+        [Required]
+        [Display(Name = "Адрес электронной почты")]
+        public string Email { get; set; }
     }
 }

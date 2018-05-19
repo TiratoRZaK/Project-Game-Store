@@ -617,4 +617,3 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csp
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csproj.CopyComplete
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.pdb
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Debug\PlaySpace.csprojResolveAssemblyReference.cache

@@ -15,7 +15,7 @@ namespace PlaySpace.Infrastructure.Abstract
 
             using (UserContext db = new UserContext())
             {
-                User user = db.Users.FirstOrDefault(u => u.Email == username);
+                User user = db.Users.FirstOrDefault(u => u.Login == username);
                 if(user != null)
                 {
                     Role userRole = db.Roles.Find(user.RoleId);
@@ -31,7 +31,7 @@ namespace PlaySpace.Infrastructure.Abstract
             bool outputResult = false;
             using (UserContext db = new UserContext())
             {
-                User user = db.Users.FirstOrDefault(u => u.Email == username);
+                User user = db.Users.FirstOrDefault(u => u.Login == username);
                 if (user != null)
                 {
                     Role userRole = db.Roles.Find(user.RoleId);

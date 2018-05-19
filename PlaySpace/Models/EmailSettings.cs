@@ -26,8 +26,9 @@ namespace PlaySpace.Models
             emailSettings = settings;
         }
 
-        public void ProcessOrder(Cart cart, ShippingDetails shippingInfo)
+        public void ProcessOrder(Cart cart, ShippingDetails shippingInfo, Order order)
         {
+            
             using (var smtpClient = new SmtpClient())
             {
                 smtpClient.EnableSsl = emailSettings.UseSsl;
@@ -64,12 +65,11 @@ namespace PlaySpace.Models
                         {
                             Game dbEntry = db.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == line.Game.GameId);
                             dbEntry.ActiveKey = db.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
+                            db.ItemKeys.Add(new ItemKey { Keys = dbEntry.ActiveKey, OrdGameId = db.OrdGames.FirstOrDefault(t=>t.OrderId == order.Id && t.GameId == line.Game.GameId).Id});
                             body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, dbEntry.ActiveKey);
                             Key delkey = db.Keys.FirstOrDefault(p => p.Item == dbEntry.ActiveKey);
                             db.Keys.Remove(delkey);
-                            //dbEntry.ActiveKey = "";
                             db.SaveChanges();
-
                         }
                         body.AppendLine();
                         i++;

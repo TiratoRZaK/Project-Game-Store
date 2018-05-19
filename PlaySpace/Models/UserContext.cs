@@ -13,6 +13,10 @@ namespace PlaySpace.Models
         public DbSet<Role> Roles { get; set; }
         public DbSet<Key> Keys { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Status> Statuses { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrdGame> OrdGames { get; set; }
+        public DbSet<ItemKey> ItemKeys { get; set; }
 
 
         public Game DeleteGame(int gameId)

@@ -8,7 +8,7 @@ namespace PlaySpace.Controllers
 {
     public class GamesController : Controller
     {
-        public int pageSize = 10;
+        public int pageSize = 90;
         UserContext context = new UserContext();
 
         public ViewResult List(string category, int page = 1, int sort = 1)

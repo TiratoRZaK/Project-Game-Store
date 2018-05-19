@@ -7,6 +7,34 @@ namespace PlaySpace.Controllers
 {
     public class AccountController : Controller
     {
+        UserContext context = new UserContext();
+        public ActionResult Index(string userName)
+        {
+            var model = context.Users.FirstOrDefault(m => m.Login == userName);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Index(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                User dbEntry = context.Users.FirstOrDefault(m => m.Id == user.Id);
+                dbEntry.Login = user.Login;
+                dbEntry.Password = user.Password;
+                dbEntry.Email = user.Email;
+                dbEntry.Age = user.Age;
+                context.SaveChanges();
+                TempData["message"] = string.Format("Изменения в вашем профиле сохранены!");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(user);
+            }
+        }
+
+
         public ActionResult Login()
         {
             return View();
@@ -22,11 +50,11 @@ namespace PlaySpace.Controllers
                 User user = null;
                 using (UserContext db = new UserContext())
                 {
-                    user = db.Users.FirstOrDefault(u => u.Email == model.Name && u.Password == model.Password);
+                    user = db.Users.FirstOrDefault(u => u.Login == model.Login && u.Password == model.Password);
                 }
                 if (user != null)
                 {
-                    FormsAuthentication.SetAuthCookie(model.Name, true);
+                    FormsAuthentication.SetAuthCookie(model.Login, true);
                     return RedirectToAction("List", "Games");
                 }
                 else
@@ -51,22 +79,22 @@ namespace PlaySpace.Controllers
                 User user = null;
                 using (UserContext db = new UserContext())
                 {
-                    user = db.Users.FirstOrDefault(u => u.Email == model.Name);
+                    user = db.Users.FirstOrDefault(u => u.Login == model.Login);
                 }
                 if(user == null)
                 {
                     //создание нового пользователя
                     using (UserContext db = new UserContext())
                     {
-                        db.Users.Add(new Models.User { Email = model.Name, Password = model.Password, Age = model.Age, RoleId = 2});
+                        db.Users.Add(new User { Login = model.Login, Password = model.Password, Age = model.Age, RoleId = 2, Email = model.Email});
                         db.SaveChanges();
 
-                        user = db.Users.Where(u => u.Email == model.Name && u.Password == model.Password).FirstOrDefault();
+                        user = db.Users.Where(u => u.Login == model.Login && u.Password == model.Password).FirstOrDefault();
                     }
                     //если пользователь удачно добавлен в бд
                     if(user != null)
                     {
-                        FormsAuthentication.SetAuthCookie(model.Name, true);
+                        FormsAuthentication.SetAuthCookie(model.Login, true);
                         return RedirectToAction("List", "Games");
                     }
                 }
