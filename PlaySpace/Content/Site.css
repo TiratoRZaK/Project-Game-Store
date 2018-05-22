@@ -1,6 +1,7 @@
 ﻿.center {
     width: 1120px;
     margin: auto;
+    color: black;
 }
 
 .panel-top {
@@ -17,6 +18,11 @@
 .login a,
 .login span {
     color: #fff;
+}
+
+.product-catalog {
+    width: 900px;
+    height: auto;
 }
 
 .login a:hover {
@@ -370,6 +376,13 @@
     border-radius: 5px;
 }
 
+.not-key {
+    float: right;
+    text-align: center;
+    font-size: 11px;
+    color: black;
+}
+
     .add-cart:hover {
         background: #888;
         color: black;
@@ -401,7 +414,7 @@
     text-align: center;
     display: inline-block;
     margin-bottom: 5px;
-    margin-left: 290px;
+    margin-left: 40%;
 }
 
     #page a:active {

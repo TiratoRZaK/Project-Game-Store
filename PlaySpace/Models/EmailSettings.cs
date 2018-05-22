@@ -65,7 +65,7 @@ namespace PlaySpace.Models
                         {
                             Game dbEntry = db.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == line.Game.GameId);
                             dbEntry.ActiveKey = db.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
-                            db.ItemKeys.Add(new ItemKey { Keys = dbEntry.ActiveKey, OrdGameId = db.OrdGames.FirstOrDefault(t=>t.OrderId == order.Id && t.GameId == line.Game.GameId).Id});
+                            db.ItemKeys.Add(new ItemKey { Keys = dbEntry.ActiveKey, OrdGameId = db.OrdGames.FirstOrDefault(t=>t.OrderId == order.Id && t.GameName == line.Game.Name).Id});
                             body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, dbEntry.ActiveKey);
                             Key delkey = db.Keys.FirstOrDefault(p => p.Item == dbEntry.ActiveKey);
                             db.Keys.Remove(delkey);

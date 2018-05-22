@@ -2,7 +2,7 @@
     @if (User.Identity.IsAuthenticated)
     {
         <tr class="l-ou"><span>Привет, @User.Identity.Name!</span></tr>
-        @Html.ActionLink("Профиль", "Index","Account", new { userName = User.Identity.Name }, null )
+        @Html.ActionLink("Ваш профиль", "Index","Account")
         using (Html.BeginForm("Logout", "Account", FormMethod.Post, new { @class = "form-inline" }))
         {
             <tr><button class="l-out">Выйти</button></tr>

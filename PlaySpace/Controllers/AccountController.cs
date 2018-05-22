@@ -8,9 +8,9 @@ namespace PlaySpace.Controllers
     public class AccountController : Controller
     {
         UserContext context = new UserContext();
-        public ActionResult Index(string userName)
+        public ActionResult Index()
         {
-            var model = context.Users.FirstOrDefault(m => m.Login == userName);
+            var model = context.Users.FirstOrDefault(m=>m.Login == User.Identity.Name);
             return View(model);
         }
 
@@ -19,18 +19,17 @@ namespace PlaySpace.Controllers
         {
             if (ModelState.IsValid)
             {
-                User dbEntry = context.Users.FirstOrDefault(m => m.Id == user.Id);
+                User dbEntry = context.Users.FirstOrDefault(m => m.Login == User.Identity.Name);
                 dbEntry.Login = user.Login;
                 dbEntry.Password = user.Password;
                 dbEntry.Email = user.Email;
                 dbEntry.Age = user.Age;
                 context.SaveChanges();
-                TempData["message"] = string.Format("Изменения в вашем профиле сохранены!");
                 return RedirectToAction("Index");
             }
             else
             {
-                return View(user);
+                return RedirectToAction("Index");
             }
         }
 

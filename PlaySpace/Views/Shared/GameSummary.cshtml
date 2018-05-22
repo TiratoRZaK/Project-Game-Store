@@ -27,13 +27,20 @@
                 {
                     <span class="price">@Model.Price.ToString("# руб")</span>
                 }
-                @using (Html.BeginForm("AddToCart", "Cart"))
+                @if (Model.CountKeys > 0)
                 {
-                    <div class="add-cart right">
-                        @Html.HiddenFor(x => x.GameId)
-                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                        <input type="submit" value="В корзину" />
-                    </div>
+                    using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        <div class="add-cart right">
+                            @Html.HiddenFor(x => x.GameId)
+                            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                            <input type="submit" value="В корзину" />
+                        </div>
+                    }
+                }
+                else
+                {
+                    <small class="not-key clearfix right"><strong>Нет в наличии</strong></small>
                 }
              </div>
         </div>

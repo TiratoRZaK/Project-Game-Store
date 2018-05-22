@@ -101,5 +101,19 @@ namespace PlaySpace.Controllers
             }
             return RedirectToAction("Index", new { id = deletedGame.CategoryId });
         }
+
+        public ActionResult OrderCheck()
+        {
+            return View(context.Orders);
+        }
+
+        [HttpPost]
+        public ActionResult OrderCheck(Order order)
+        {
+            Order dbEntry = context.Orders.Find(order.Id);
+            dbEntry.StatusId = order.StatusId;
+            context.SaveChanges();
+            return RedirectToAction("Index","Oplata",new { order });
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace PlaySpace.Controllers
 {
     public class GamesController : Controller
     {
-        public int pageSize = 90;
+        public int pageSize = 9;
         UserContext context = new UserContext();
 
         public ViewResult List(string category, int page = 1, int sort = 1)
@@ -20,7 +20,7 @@ namespace PlaySpace.Controllers
                 model = new GameListViewModel
                 {
                     Games = context.Games.Include(nameof(Category))
-                .Where(p => category == null || p.Category.CategoryName == category)
+                .Where(p => category == null || p.Category.CategoryName == category) 
                 .OrderByDescending(Game => (Game.Price / 100 * (100 - Game.Discount)))
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize),
@@ -35,13 +35,6 @@ namespace PlaySpace.Controllers
                     CurrentCategory = category,
                     CurrentSort = sort
                 };
-                foreach(Game t in model.Games)
-                {
-                    if(t.CountKeys <= 0)
-                    {
-                        model.Games = model.Games.Where(m=>m != t);
-                    }
-                }
             }
             else
             {
@@ -63,13 +56,6 @@ namespace PlaySpace.Controllers
                     CurrentCategory = category,
                     CurrentSort = sort
                 };
-                foreach (Game t in model.Games)
-                {
-                    if (t.CountKeys <= 0)
-                    {
-                        model.Games = model.Games.Where(m => m != t);
-                    }
-                }
             }
             return View(model);
         }
@@ -77,13 +63,14 @@ namespace PlaySpace.Controllers
         public ActionResult Action()
         {
             int max = 0;
+            int gameId = 1;
             foreach (var g in context.Games)
             {
-                if (g.Discount > max) max = g.Discount;
+                if (g.Discount > max) { max = g.Discount; gameId = g.GameId; }
             }
             Game game = context.Games
-                .FirstOrDefault(s => s.Discount == max);
-            return View(game);
+                .FirstOrDefault(s => s.GameId == gameId);
+            return View(game);  
         }
 
         public FileContentResult GetImage(int gameId)

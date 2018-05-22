@@ -49,13 +49,20 @@
 </table>
 
 <div class="text-center">
-    <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупки</a>
+    @if (Model.ReturnUrl != null)
+    {
+        <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупки</a>
+    }
+    else
+    {
+        <a class="btn btn-primary" href="/">Продолжить покупки</a>
+    }
     @if (User.Identity.IsAuthenticated)
     {
         @Html.ActionLink("Оформить заказ", "Checkout", null, new { @class = "btn btn-primary" })
     }
     else
     {
-        <a class = "btn btn-primary" href="/Account/Login">Войти</a>
+        <a class="btn btn-primary" href="/Account/Login">Войти</a>
     }
 </div>

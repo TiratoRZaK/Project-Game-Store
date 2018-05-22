@@ -75,7 +75,7 @@ namespace PlaySpace.Controllers
             {
                 if (cartline.Game.Discount != 0)
                 {
-                    allprice += (int)cartline.Quantity * (int)(cartline.Game.Price * Decimal.Divide(cartline.Game.Discount, 100));
+                    allprice += (int)cartline.Quantity * ((int)cartline.Game.Price - (int)(cartline.Game.Price * Decimal.Divide(cartline.Game.Discount, 100)));
                 }
                 else allprice += (int)cartline.Quantity * (int)cartline.Game.Price;
             }
@@ -83,7 +83,7 @@ namespace PlaySpace.Controllers
             Order order = new Order
             {
                 Data = DateTime.Now,
-                StatusId = 2,
+                StatusId = 1,
                 UserId = dbEntry.Id,
                 AllPrice = allprice
             };
@@ -91,16 +91,11 @@ namespace PlaySpace.Controllers
             context.SaveChanges();
             foreach (CartLine cartline in cart.Lines)
             {
-                context.OrdGames.Add(new OrdGame { GameId = cartline.Game.GameId, OrderId = order.Id, Quantity = cartline.Quantity });
+                context.OrdGames.Add(new OrdGame { GameName = cartline.Game.Name, OrderId = order.Id, Quantity = cartline.Quantity });
                 context.SaveChanges();
             }
             context.SaveChanges();
-
-            orderProcessor.ProcessOrder(cart, new ShippingDetails
-            {
-                Email = dbEntry.Email,
-                Name = dbEntry.Login
-            }, order);
+            
             return order;
         }
 
@@ -114,8 +109,7 @@ namespace PlaySpace.Controllers
             if (ModelState.IsValid)
             {
                 Order order = AddOrder(GetCart());
-                GetCart().Clear();
-                return RedirectToAction("Index","Oplata", new { orderId = order.Id });
+                return RedirectToAction("Index", "Oplata", new { orderId = order.Id });
             }
             else
             {

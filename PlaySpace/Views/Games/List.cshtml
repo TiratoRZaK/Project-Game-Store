@@ -19,20 +19,21 @@
 </div>
 <div class="middle center clearfix">
     <div class="sidebar">
-        <h1>Самое выгодное предложение на сегодня!!!</h1>
-        @Html.Action("Action")
+        @if (Model.Games != null)
+        {
+            <h1>Самое выгодное предложение на сегодня!!!</h1>
+            @Html.Action("Action", new { model = Model })
+        }
     </div>
-    <div class="content clearfix center">
-        <div class="product-catalog center">
-            @foreach (var p in @Model.Games)
-            {
+    <div class="product-catalog">
+        @foreach (var p in @Model.Games)
+        {
+            
                 @Html.Partial("GameSummary", p)
-            }
-        </div>
-    </div>
-    <br />
-    <div id="page">
-        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
-              new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
+        }
     </div>
 </div>
+<footer id="page">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+             new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
+</footer>
