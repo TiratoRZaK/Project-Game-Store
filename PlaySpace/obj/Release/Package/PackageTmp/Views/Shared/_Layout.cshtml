@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" type="text/css" href="style.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    <title>Play Space - Магазин компьютерных игр.</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="panel-top">
+            <div class="center clearfix">
+                <div class="basket">
+                    <a href="/Cart/Index" class=""<span> Корзина(@Html.Action("Summary", "Cart")) </span></a>
+                </div>
+                <div class="acc">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <a href="/Account/Register" class="p-t-acc">Зарегистрироваться</a>
+                    }
+                </div>
+            </div>
+        </div>
+        <div id="header" class="center clearfix">
+            <div id="logo" class="left">
+                <a href="/Games/List">
+                    <img src="~/Content/Images/logo.png" height="60" width="61" alt="" />
+                    <span>Play Space</span>
+                </a>
+            </div>
+            <ul class="nav right clearfix">
+                <li><a href="/Games/List">Каталог</a></li>
+                @if (User.IsInRole("admin"))
+                {
+                    <li><a href="/Category/Index">Админ-панель</a></li>
+                }
+            </ul>
+        </div>
+        <div id="home">
+            <div class="home-bg">
+                <div class="center">
+                    <h2 class="title-home">Твоё любимое пространство</h2>
+                    <div class="login">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        @RenderBody()
+    </div>
+</body>
+</html>
