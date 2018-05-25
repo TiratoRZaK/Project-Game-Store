@@ -10,19 +10,7 @@ namespace PlaySpace.Controllers
 {
     public class OplataController : Controller
     {
-        private IOrderProcessor orderProcessor;
         UserContext context = new UserContext();
-
-        public Cart GetCart()
-        {
-            Cart cart = (Cart)Session["Cart"];
-            if (cart == null)
-            {
-                cart = new Cart();
-                Session["Cart"] = cart;
-            }
-            return cart;
-        }
 
         public ActionResult Index(int orderId)
         {
@@ -30,23 +18,11 @@ namespace PlaySpace.Controllers
             return View(order);
         }
         [HttpPost]
-        public ActionResult Index(Order order)
+        public void CompletedOrder(string label)
         {
-            UserContext context = new UserContext();
-            User dbEntry = context.Users.FirstOrDefault(m => m.Login == User.Identity.Name);
-
-            orderProcessor.ProcessOrder(GetCart(), new ShippingDetails
-            {
-                Email = dbEntry.Email,
-                Name = dbEntry.Login
-            }, order);
-
-            return RedirectToAction("Completed", "Cart");
-            
-            
-            
-            
-
+            Order dbEntry = context.Orders.Find(Convert.ToInt32(label));
+            dbEntry.StatusId = 2;
+            context.SaveChanges();
         }
     }
 }

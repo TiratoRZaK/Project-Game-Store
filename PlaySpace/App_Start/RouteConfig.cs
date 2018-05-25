@@ -44,6 +44,12 @@ namespace PlaySpace
                 url: "{controller}/{action}/{order}",
                 defaults: new { controller = "Admin", action = "OrderCheck", order = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "EmailDefault",
+                url: "{controller}/{action}/{orderId}",
+                defaults: new { controller = "Cart", action = "Completed", orderId = UrlParameter.Optional }
+            );
         }
     }
 }

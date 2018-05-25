@@ -87,3 +87,4 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.c
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csproj.CopyComplete
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.pdb
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csprojResolveAssemblyReference.cache

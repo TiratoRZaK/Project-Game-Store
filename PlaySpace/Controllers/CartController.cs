@@ -26,8 +26,16 @@ namespace PlaySpace.Controllers
             }
             return cart;
         }
-        public ActionResult Completed()
+        [HttpPost]
+        public ActionResult Completed(int orderId)
         {
+            User dbEntry = context.Users.FirstOrDefault(m => m.Login == User.Identity.Name);
+            Order order = context.Orders.Find(orderId);
+            orderProcessor.ProcessOrder(GetCart(), new ShippingDetails
+            {
+                Email = dbEntry.Email,
+                Name = dbEntry.Login
+            },order);
             return View();
         }
         public ViewResult Index(string returnUrl)

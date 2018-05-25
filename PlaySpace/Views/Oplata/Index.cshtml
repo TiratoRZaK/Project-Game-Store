@@ -1,15 +1,25 @@
 ﻿@model PlaySpace.Models.Order
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Оплата заказа";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="center">
     <h2 style="text-align:center; color: black">Выберите способ оплаты:</h2>
     <div style="margin-left: 18%">
-        <iframe style="margin-left: 40px;" src="https://money.yandex.ru/quickpay/button-widget?targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA&default-sum=@Model.AllPrice&button-text=12&any-card-payment-type=on&button-size=l&button-color=black&successURL=http%3A%2F%2Flocalhost%3A50485%2FCart%2FCompleted%2F&quickpay=small&account=410013969614361&" width="227" height="48" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-        <iframe style="margin-left: 40px;" src="https://money.yandex.ru/quickpay/button-widget?targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA&default-sum=@Model.AllPrice&button-text=12&yamoney-payment-type=on&button-size=l&button-color=black&successURL=http%3A%2F%2Flocalhost%3A50485%2FCart%2FCompleted%2F&quickpay=small&account=410013969614361&" width="227" height="48" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+        <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+        <input type="hidden" name="receiver" value="410013969614361">
+        <input type="hidden" name="formcomment" value="Play Space: Магазин компьютерных игр">
+        <input type="hidden" name="short-dest" value="Покупка игр на сайте Play Space">
+        <input type="hidden" name="label" value="@Model.Id">
+        <input type="hidden" name="quickpay-form" value="shop">
+        <input type="hidden" name="targets" value="Оплата заказа №@Model.Id">
+        <input type="hidden" name="sum" value="@Model.AllPrice" data-type="number">
+        <label><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label>
+        <label><input type="radio" name="paymentType" value="AC">Банковской картой</label>
+        <input type="hidden" name="successURL" value="http://playspace.info/Cart/Completed/@Model.Id">
+        <input type="submit" value="Оплатить"></form>
     </div>
 </div>
 
