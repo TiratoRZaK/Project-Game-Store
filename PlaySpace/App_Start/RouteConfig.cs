@@ -16,6 +16,12 @@ namespace PlaySpace
             );
 
             routes.MapRoute(
+                name: "GamesDefault",
+                url: "{controller}/{action}/{Id}",
+                defaults: new { controller = "Games", action = "Index", Id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "AdminDefault",
                 url: "{controller}/{action}/{gameId}",
                 defaults: new { controller = "Admin", action = "Index", gameId = UrlParameter.Optional }

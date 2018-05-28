@@ -32,7 +32,7 @@ namespace PlaySpace.Models
         [Compare("Password", ErrorMessage = "Пароли не совпадают")]
         public string ConfirmPassword { get; set; }
         [Required]
-        [Display(Name = "Возраст")]
+        [Display(Name = "Год рождения")]
         public int Age { get; set; }
         [Required]
         [Display(Name = "Адрес электронной почты")]

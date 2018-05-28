@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Mail;
 using PlaySpace.Abstract;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace PlaySpace.Models
 {
@@ -19,6 +20,8 @@ namespace PlaySpace.Models
 
     public class EmailOrderProcessor : IOrderProcessor
     {
+        UserContext context = new UserContext();
+
         private EmailSettings emailSettings;
 
         public EmailOrderProcessor(EmailSettings settings)
@@ -26,9 +29,24 @@ namespace PlaySpace.Models
             emailSettings = settings;
         }
 
-        public void ProcessOrder(Cart cart, ShippingDetails shippingInfo, Order order)
+        public void ProcessOrder(ShippingDetails shippingInfo, Order order)
         {
-            
+            List<OrdGame> ordGame = new List<OrdGame>();
+            foreach(OrdGame ord in context.OrdGames)
+            {
+                if(ord.OrderId == order.Id)
+                {
+                    ordGame.Add(ord);
+                }
+            }
+            List<CartLine> cartLines = new List<CartLine>();
+            int allPrices = 0;
+            foreach (OrdGame ord in ordGame)
+            {
+                Game dbGame = context.Games.FirstOrDefault(f => f.Name == ord.GameName);
+                cartLines.Add(new CartLine { Game = dbGame, Quantity = ord.Quantity });
+            }
+
             using (var smtpClient = new SmtpClient())
             {
                 smtpClient.EnableSsl = emailSettings.UseSsl;
@@ -44,19 +62,20 @@ namespace PlaySpace.Models
                     .AppendLine("Здравствуйте, " + shippingInfo.Name + ". Ваш заказ:")
                     .AppendLine("---");
 
-                foreach (var line in cart.Lines)
+                foreach (var line in cartLines)
                 {
                     var subtotal = (line.Game.Price / 100 * (100 - line.Game.Discount)) * line.Quantity;
+                    allPrices += (int)subtotal;
                     body.AppendFormat("{0} x {1} (итого: {2:c})",
                         line.Quantity, line.Game.Name, subtotal)
                         .AppendLine();
                 }
-
-                body.AppendFormat("Общая стоимость: {0:c}", cart.ComputeTotalValue())
+                
+                body.AppendFormat("Общая стоимость: {0:c}", allPrices)
                     .AppendLine()
                     .AppendLine("---");
                 
-                foreach (var line in cart.Lines)
+                foreach (var line in cartLines)
                 {
                     int i = 0;
                     while (i < line.Quantity)

@@ -104,7 +104,7 @@ namespace PlaySpace.Controllers
 
         public ActionResult OrderCheck()
         {
-            return View(context.Orders);
+            return View(context.Orders.Include(nameof(Models.User)));
         }
 
         [HttpPost]

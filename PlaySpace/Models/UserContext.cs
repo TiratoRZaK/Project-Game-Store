@@ -61,8 +61,11 @@ namespace PlaySpace.Models
                 dbEntry.Discription = game.Discription;
                 dbEntry.Price = game.Price;
                 dbEntry.Discount = game.Discount;
-                dbEntry.ImageData = game.ImageData;
-                dbEntry.ImageMimeType = game.ImageMimeType;
+                if(game.ImageData != null && game.ImageMimeType != null)
+                {
+                    dbEntry.ImageData = game.ImageData;
+                    dbEntry.ImageMimeType = game.ImageMimeType;
+                }
                 dbEntry.Category = game.Category;
                 dbEntry.CategoryId = game.CategoryId;
 

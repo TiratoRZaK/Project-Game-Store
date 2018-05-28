@@ -76,16 +76,16 @@
     margin-left: 30px;
 }
 
-.nav li:before {
-    content: "";
-    position: absolute;
-    top: -17px;
-    left: 50%;
-    margin-left: -18px;
-    display: none;
-    width: 35px;
-    border-top: 4px solid #EFC539;
-}
+    .nav li:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -18px;
+        display: none;
+        width: 35px;
+        border-top: 4px solid #b13de6;
+    }
 
 .nav li:hover::before {
     display: block;
@@ -149,7 +149,6 @@
     padding: 5px 10px;
     text-align: center;
     margin-left: 7px;
-    width: 120px;
     border: 1px solid #7f43ad;
     -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
     -moz-box-shadow: inset 0 5px 5px rgba(0,0,0,.25);
@@ -158,9 +157,7 @@
 
 .s-category li:hover {
     border-style: solid;
-    border-color: #b13de6;
-    text-overflow: ellipsis;
-}
+    border-color: #b13de6;}
 
 .s-category a {
     font-size: 20px;

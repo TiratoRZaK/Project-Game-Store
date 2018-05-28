@@ -29,14 +29,14 @@ namespace PlaySpace.Controllers
         
         public ActionResult Completed(int Id)
         {
-            //User dbEntry = context.Users.FirstOrDefault(m => m.Login == User.Identity.Name);
+            User dbEntry = context.Users.FirstOrDefault(m => m.Login == User.Identity.Name);
             Order order = context.Orders.Find(Id);
-            //orderProcessor.ProcessOrder(GetCart(), new ShippingDetails
-            //{
-            //    Email = dbEntry.Email,
-            //    Name = dbEntry.Login
-            //},order);
-            order.StatusId = 3;
+            orderProcessor.ProcessOrder(new ShippingDetails
+            {
+                Email = dbEntry.Email,
+                Name = dbEntry.Login
+            }, order);
+            order.StatusId = 2;
             context.SaveChanges();
             return View();
         }
@@ -119,7 +119,9 @@ namespace PlaySpace.Controllers
             if (ModelState.IsValid)
             {
                 Order order = AddOrder(GetCart());
+                GetCart().Clear();
                 return RedirectToAction("Index", "Oplata", new { orderId = order.Id });
+                //return RedirectToAction("Completed", "Cart", new { Id = order.Id });
             }
             else
             {

@@ -21,7 +21,7 @@ namespace PlaySpace.Controllers
         public void CompletedOrder(string label)
         {
             Order dbEntry = context.Orders.Find(Convert.ToInt32(label));
-            dbEntry.StatusId = 2;
+            context.Statuses.Add(new Status { Name = "EBAT NAHUI"});
             context.SaveChanges();
         }
     }

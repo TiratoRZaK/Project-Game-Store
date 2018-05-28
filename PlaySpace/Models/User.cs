@@ -16,7 +16,7 @@ namespace PlaySpace.Models
         public string Login { get; set; }
         [Display(Name = "Пароль")]
         public string Password { get; set; }
-        [Display(Name = "Возраст")]
+        [Display(Name = "Год рождения")]
         public int Age { get; set; }
         public int RoleId { get; set; }
         public Role Role { get; set; }

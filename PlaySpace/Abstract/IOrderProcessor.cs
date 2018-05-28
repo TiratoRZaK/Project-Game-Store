@@ -9,6 +9,6 @@ namespace PlaySpace.Abstract
 {
     public interface IOrderProcessor
     {
-        void ProcessOrder(Cart cart, ShippingDetails shippingDetails, Order order);
+        void ProcessOrder(ShippingDetails shippingDetails, Order order);
     }
 }

@@ -11,6 +11,12 @@ namespace PlaySpace.Controllers
         public int pageSize = 9;
         UserContext context = new UserContext();
 
+        public ActionResult Index(int Id)
+        {
+            Game dbEntry = context.Games.Include(nameof(Category)).FirstOrDefault(m=>m.GameId == Id);
+            return View(dbEntry);
+        }
+
         public ViewResult List(string category, int page = 1, int sort = 1)
         {
             GameListViewModel model;

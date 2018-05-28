@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace PlaySpace.Controllers
 {
+    [Authorize]
     public class CategoryController : Controller
     {
         UserContext context = new UserContext();

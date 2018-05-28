@@ -227,6 +227,7 @@
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Oplata\Index.cshtml" />
     <Content Include="Views\Admin\OrderCheck.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

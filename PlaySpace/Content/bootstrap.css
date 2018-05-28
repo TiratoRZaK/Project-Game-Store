@@ -357,16 +357,15 @@ img {
 }
 
 .img-thumbnail {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-  padding: 4px;
-  line-height: 1.428571429;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 4px;
+    width: 100%;
+    height:100%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .img-circle {
@@ -602,11 +601,9 @@ dd {
 @media (min-width: 768px) {
   .dl-horizontal dt {
     float: left;
-    width: 160px;
-    overflow: hidden;
+    width: 300px;
     clear: left;
     text-align: right;
-    text-overflow: ellipsis;
     white-space: nowrap;
   }
   .dl-horizontal dd {

@@ -33,10 +33,15 @@
                     <span>Play Space</span>
                 </a>
             </div>
-            <ul class="nav right clearfix">
+            <ul class="nav right clearfix" style="font-family: 'Times New Roman';">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("Профиль", "Index", "Account")</li>
+                }
                 <li><a href="/Games/List">Каталог</a></li>
                 @if (User.IsInRole("admin"))
                 {
+                    <li>@Html.ActionLink("Заказы", "OrderCheck", "Admin")</li>
                     <li><a href="/Category/Index">Админ-панель</a></li>
                 }
             </ul>
