@@ -1,4 +1,5 @@
-﻿using PlaySpace.Models;
+﻿using PlaySpace.Abstract;
+using PlaySpace.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,14 +10,23 @@ namespace PlaySpace.Controllers
     [Authorize(Roles="admin")]
     public class AdminController : Controller
     {
+        public ICategoryRepository repositoryC;
+        public IGameRepository repository;
+        public AdminController(IGameRepository repo, ICategoryRepository repoC)
+        {
+            repository = repo;
+            repositoryC = repoC;
+        }
+        
+
         UserContext context = new UserContext();
 
         public ViewResult Index(int id)
         {
-            ViewBag.CatName = context.Categories.FirstOrDefault(m => m.Id == id).CategoryName;
+            ViewBag.CatName = repositoryC.GetCategoryList().FirstOrDefault(m => m.Id == id).CategoryName;
             ViewBag.CategoryNewGame = id;
             List<Game> gamelist = new List<Game>();
-            foreach(Game game in context.Games)
+            foreach(Game game in repository.GetGameList())
             {
                 if (game.CategoryId == id)
                 {
@@ -28,9 +38,9 @@ namespace PlaySpace.Controllers
 
         public ViewResult Edit(int gameId)
         {
-            Game game = context.Games
+            Game game = repository.GetGameList()
                 .FirstOrDefault(g => g.GameId == gameId);
-            SelectList categories = new SelectList(context.Categories, "Id", "CategoryName");
+            SelectList categories = new SelectList(repositoryC.GetCategoryList(), "Id", "CategoryName");
             ViewBag.Categories = categories;
             return View(game);
         }
@@ -46,7 +56,7 @@ namespace PlaySpace.Controllers
                     game.ImageData = new byte[image.ContentLength];
                     image.InputStream.Read(game.ImageData, 0, image.ContentLength);
                 }                
-                context.SaveGame(game);
+                repository.Update(game);
                 TempData["message"] = string.Format("Изменения в игре \"{0}\" были сохранены", game.Name);
                 return RedirectToAction("Index", new { id=game.CategoryId });
             }
@@ -77,11 +87,11 @@ namespace PlaySpace.Controllers
                     game.ImageData = new byte[image.ContentLength];
                     image.InputStream.Read(game.ImageData, 0, image.ContentLength);
                 }
-                context.Games.Add(game);
-                context.SaveChanges();
+                repository.Create(game);
+                repository.Save();
                 Game dbEntry = context.Games.Include(nameof(Game.Keys)).FirstOrDefault(m=>m.GameId == game.GameId);
                 dbEntry.Keys.Add(new Key { Item = game.ActiveKey, GameId = game.GameId });
-                context.SaveChanges();
+                repository.Save();
                 TempData["message"] = string.Format("Игра \"{0}\" была сохранена", game.Name);
                 return RedirectToAction("Index", new { id = game.CategoryId });
             }
@@ -93,7 +103,7 @@ namespace PlaySpace.Controllers
 
         public ActionResult Delete(int gameId)
         {
-            Game deletedGame = context.DeleteGame(gameId);
+            Game deletedGame = repository.Delete(gameId);
             if (deletedGame != null)
             {
                 TempData["message"] = string.Format("Игра \"{0}\" была удалена",
@@ -110,9 +120,6 @@ namespace PlaySpace.Controllers
         [HttpPost]
         public ActionResult OrderCheck(Order order)
         {
-            Order dbEntry = context.Orders.Find(order.Id);
-            dbEntry.StatusId = order.StatusId;
-            context.SaveChanges();
             return RedirectToAction("Index","Oplata",new { order });
         }
     }

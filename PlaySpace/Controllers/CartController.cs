@@ -27,19 +27,6 @@ namespace PlaySpace.Controllers
             return cart;
         }
         
-        public ActionResult Completed(int Id)
-        {
-            User dbEntry = context.Users.FirstOrDefault(m => m.Login == User.Identity.Name);
-            Order order = context.Orders.Find(Id);
-            orderProcessor.ProcessOrder(new ShippingDetails
-            {
-                Email = dbEntry.Email,
-                Name = dbEntry.Login
-            }, order);
-            order.StatusId = 2;
-            context.SaveChanges();
-            return View();
-        }
         public ViewResult Index(string returnUrl)
         {
             return View(new CartIndexViewModel
@@ -74,6 +61,7 @@ namespace PlaySpace.Controllers
             {
                 GetCart().RemoveLine(game);
             }
+            
             return RedirectToAction("Index", new { returnUrl });
         }
 
@@ -94,6 +82,7 @@ namespace PlaySpace.Controllers
             {
                 Data = DateTime.Now,
                 StatusId = 1,
+                DataPay = null,
                 UserId = dbEntry.Id,
                 AllPrice = allprice
             };
@@ -121,7 +110,6 @@ namespace PlaySpace.Controllers
                 Order order = AddOrder(GetCart());
                 GetCart().Clear();
                 return RedirectToAction("Index", "Oplata", new { orderId = order.Id });
-                //return RedirectToAction("Completed", "Cart", new { Id = order.Id });
             }
             else
             {

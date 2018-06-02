@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PlaySpace.Models.Order>
+
+@{
+    ViewBag.Title = "Заказы";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="center" , style="color: black; font-size: 22px; border-radius: 5px; text-align: center; background-color: white; margin-bottom: 20px;">Заказы на @DateTime.Now</h1>
+
+<table class="table center", style="font-family: 'Times New Roman';">
+    <tr>
+        <th>
+            ID заказа
+        </th>
+        <th>
+            Статус заказа
+        </th>
+        <th>
+            Дата оплаты
+        </th>
+        <th>
+            Email покупателя
+        </th>
+        <th>
+            Дата заказа
+        </th>
+        <th>
+            Общая стоимость
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>               
+                @Html.DisplayFor(modelItem => item.StatusId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllPrice)
+            </td>
+        </tr>
+    }
+</table>
+<div class="center" style="margin-top: 20px;">
+    @Html.ActionLink("Вернуться к каталогу", "List", "Games", null, new
+    {
+        @class = "btn btn-default"
+    })
+</div>

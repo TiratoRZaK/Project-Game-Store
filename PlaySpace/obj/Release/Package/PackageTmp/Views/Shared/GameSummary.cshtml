@@ -1,0 +1,51 @@
+﻿@model PlaySpace.Models.Game
+
+<a href="/Games/Index/@Model.GameId">
+    <div class="box-thumb">
+        @if (Model.ImageData == null)
+        {
+            <div class="p-img">
+                <img src="~/Content/Images/no.png" alt="" />
+            </div>
+        }
+        else
+        {
+            <div class="p-img">
+                <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" />
+            </div>
+        }
+        <div class="descript">
+            <div class="p-footer clearfix">
+                <h6>@Model.Name</h6>
+                <p><strong>@Model.Discription</strong></p>
+
+                <div class="p-footer-price">
+                    @if (Model.Discount != 0)
+                    {
+                        <span class="price-lg">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
+                        <span class="discount">@(Model.Discount)%</span>
+                    }
+                    else
+                    {
+                        <span class="price">@Model.Price.ToString("# руб")</span>
+                    }
+                    @if (Model.CountKeys > 0)
+                    {
+                        using (Html.BeginForm("AddToCart", "Cart"))
+                        {
+                            <div class="add-cart right">
+                                @Html.HiddenFor(x => x.GameId)
+                                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                                <input type="submit" value="В корзину" />
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <small class="not-key clearfix right"><strong>Нет в наличии</strong></small>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</a>

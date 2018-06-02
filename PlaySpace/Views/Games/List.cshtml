@@ -2,10 +2,14 @@
 @using PlaySpace.HtmlHelpers
 @model GameListViewModel
 
+@{
+    ViewBag.Title = "Каталог";
+}
+
 <div class="sorting center">
-        <ul class="s-category clearfix" style="font-family: 'Times New Roman'; font-weight: 600;">
-            @Html.Action("Menu", "Nav")
-        </ul>
+    <ul class="s-category clearfix" style="font-family: 'Times New Roman'; font-weight: 600;">
+        @Html.Action("Menu", "Nav")
+    </ul>
     <div class="s-list">
         @if (Model.CurrentSort == 1)
         {
@@ -28,12 +32,12 @@
     <div class="product-catalog">
         @foreach (var p in @Model.Games)
         {
-            
-                @Html.Partial("GameSummary", p)
+
+            @Html.Partial("GameSummary", p)
         }
     </div>
 </div>
 <footer id="page">
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
-             new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
+                 new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
 </footer>

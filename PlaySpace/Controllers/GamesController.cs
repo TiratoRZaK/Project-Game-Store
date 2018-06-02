@@ -1,4 +1,5 @@
-﻿using PlaySpace.Models;
+﻿using PlaySpace.Abstract;
+using PlaySpace.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -8,6 +9,11 @@ namespace PlaySpace.Controllers
 {
     public class GamesController : Controller
     {
+        private IGameRepository repository;
+        public GamesController (IGameRepository repo)
+        {
+            repository = repo;
+        }
         public int pageSize = 9;
         UserContext context = new UserContext();
 
@@ -70,18 +76,18 @@ namespace PlaySpace.Controllers
         {
             int max = 0;
             int gameId = 1;
-            foreach (var g in context.Games)
+            foreach (var g in repository.GetGameList())
             {
                 if (g.Discount > max) { max = g.Discount; gameId = g.GameId; }
             }
-            Game game = context.Games
+            Game game = repository.GetGameList()
                 .FirstOrDefault(s => s.GameId == gameId);
             return View(game);  
         }
 
         public FileContentResult GetImage(int gameId)
         {
-            Game game = context.Games
+            Game game = repository.GetGameList()
                 .FirstOrDefault(g => g.GameId == gameId);
 
             if (game != null)

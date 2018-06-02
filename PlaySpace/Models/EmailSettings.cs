@@ -20,13 +20,16 @@ namespace PlaySpace.Models
 
     public class EmailOrderProcessor : IOrderProcessor
     {
+        IGameRepository repository;
+
         UserContext context = new UserContext();
 
         private EmailSettings emailSettings;
 
-        public EmailOrderProcessor(EmailSettings settings)
+        public EmailOrderProcessor(EmailSettings settings, IGameRepository repo)
         {
             emailSettings = settings;
+            repository = repo;
         }
 
         public void ProcessOrder(ShippingDetails shippingInfo, Order order)
@@ -43,7 +46,7 @@ namespace PlaySpace.Models
             int allPrices = 0;
             foreach (OrdGame ord in ordGame)
             {
-                Game dbGame = context.Games.FirstOrDefault(f => f.Name == ord.GameName);
+                Game dbGame = repository.GetGameList().FirstOrDefault(f => f.Name == ord.GameName);
                 cartLines.Add(new CartLine { Game = dbGame, Quantity = ord.Quantity });
             }
 
@@ -80,19 +83,18 @@ namespace PlaySpace.Models
                     int i = 0;
                     while (i < line.Quantity)
                     {
-                        using (UserContext db = new UserContext())
-                        {
-                            Game dbEntry = db.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == line.Game.GameId);
-                            dbEntry.ActiveKey = db.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
-                            db.ItemKeys.Add(new ItemKey { Keys = dbEntry.ActiveKey, OrdGameId = db.OrdGames.FirstOrDefault(t=>t.OrderId == order.Id && t.GameName == line.Game.Name).Id});
-                            body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, dbEntry.ActiveKey);
-                            Key delkey = db.Keys.FirstOrDefault(p => p.Item == dbEntry.ActiveKey);
-                            db.Keys.Remove(delkey);
-                            db.SaveChanges();
-                        }
-                        body.AppendLine();
+                        Game dbEntry = context.Games.Include(nameof(Game.Keys)).FirstOrDefault(g => g.GameId == line.Game.GameId);
+                        dbEntry.ActiveKey = context.Keys.FirstOrDefault(p => p.GameId == line.Game.GameId).Item;
+                        context.ItemKeys.Add(new ItemKey { Keys = dbEntry.ActiveKey, OrdGameId = context.OrdGames.FirstOrDefault(t=>t.OrderId == order.Id && t.GameName == line.Game.Name).Id});
+                        body.AppendFormat("Ваш ключ для игры {0}:{1}.", line.Game.Name, dbEntry.ActiveKey);
+                        Key delkey = context.Keys.FirstOrDefault(p => p.Item == dbEntry.ActiveKey);
+                        context.Keys.Remove(delkey);
+                        context.SaveChanges();
                         i++;
                     }
+                    body.AppendLine();
+                    
+                       
                 }
                 body.AppendLine("Спасибо за покупку! :)");
                 MailMessage mailMessage = new MailMessage(

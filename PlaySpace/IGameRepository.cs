@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlaySpace
 {
-    public interface IGameRepository
+    public interface IRepository
     {
         IEnumerable<Game> Games { get; }
         void SaveGame(Game game);

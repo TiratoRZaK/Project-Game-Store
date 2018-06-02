@@ -7,7 +7,7 @@
 
 <h1 class="center" , style="color: black; font-size: 22px; border-radius: 5px; text-align: center; background-color: white; margin-bottom: 20px;">Заказы на @DateTime.Now</h1>
 
-<table class="table center">
+<table class="table center", style="font-family: 'Times New Roman';">
     <tr>
         <th>
             ID заказа
@@ -16,10 +16,13 @@
             Статус заказа
         </th>
         <th>
+            Дата оплаты
+        </th>
+        <th>
             Email покупателя
         </th>
         <th>
-            Дата и время заказа
+            Дата заказа
         </th>
         <th>
             Общая стоимость
@@ -34,6 +37,9 @@
             </td>
             <td>               
                 @Html.DisplayFor(modelItem => item.StatusId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPay)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.User.Email)

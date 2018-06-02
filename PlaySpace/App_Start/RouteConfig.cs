@@ -52,9 +52,9 @@ namespace PlaySpace
             );
 
             routes.MapRoute(
-                name: "EmailDefault",
-                url: "{controller}/{action}/{Id}",
-                defaults: new { controller = "Cart", action = "Completed", Id = UrlParameter.Optional }
+                name: "PaidDefault",
+                url: "{controller}/{action}/{Id})",
+                defaults: new { controller = "Oplate", action = "Paid", Id = UrlParameter.Optional }
             );
         }
     }

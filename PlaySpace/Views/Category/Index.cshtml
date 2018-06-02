@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<PlaySpace.Models.Category>
 
 @{
-    ViewBag.Title = "Админ панель: список категорий";
+    ViewBag.AdminTitle = "Список категорий";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -28,7 +28,7 @@
     </div>
     <div class="panel-footer">
         @Html.ActionLink("Добавить категорию", "Create", null,
-                                 new { @class = "btn btn-default" })
+                                      new { @class = "btn btn-default" })
         <a href="/" class="btn btn-default">Вернуться к каталогу игр</a>
     </div>
 </div>

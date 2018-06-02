@@ -87,4 +87,12 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.c
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csproj.CopyComplete
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.pdb
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csprojResolveAssemblyReference.cache
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Castle.Core.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.ValueTuple.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Castle.Core.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.pdb
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.ValueTuple.xml

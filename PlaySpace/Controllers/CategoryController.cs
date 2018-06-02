@@ -1,4 +1,5 @@
-﻿using PlaySpace.Models;
+﻿using PlaySpace.Abstract;
+using PlaySpace.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +11,24 @@ namespace PlaySpace.Controllers
     [Authorize]
     public class CategoryController : Controller
     {
+        private IGameRepository repository;
+        private ICategoryRepository repositoryC;
+        public CategoryController(IGameRepository repositoryGames, ICategoryRepository repositoryCategories)
+        {
+            repository = repositoryGames;
+            repositoryC = repositoryCategories;
+        }
+
         UserContext context = new UserContext();
 
         public ViewResult Index()
         {
-            return View(context.Categories);
+            return View(repositoryC.GetCategoryList());
         }
 
         public ViewResult Create()
         {
-            Category category = context.Categories.Add(new Category());
+            Category category = repositoryC.Create(new Category());
             return View(category);
         }
 
@@ -28,7 +37,7 @@ namespace PlaySpace.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.SaveCategory(category);
+                repositoryC.Update(category);
                 TempData["message"] = string.Format("Категория \"{0}\" была успешно добавлена", category.CategoryName);
                 return RedirectToAction("Index");
             }
@@ -41,7 +50,7 @@ namespace PlaySpace.Controllers
 
         public ActionResult Delete(int id)
         {
-            Category deletedCategory = context.DeleteCategory(id);
+            Category deletedCategory = repositoryC.Delete(id, repository);
             if (deletedCategory != null)
             {
                 TempData["message"] = string.Format("Категория \"{0}\" была удалена",

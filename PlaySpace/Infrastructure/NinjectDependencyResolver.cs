@@ -1,4 +1,5 @@
-﻿using Ninject;
+﻿using Moq;
+using Ninject;
 using PlaySpace.Abstract;
 using PlaySpace.Models;
 using System;
@@ -28,10 +29,10 @@ namespace PlaySpace.Infrastructure
         }
 
         private void AddBindings()
-        {
-
+        {        
             EmailSettings emailSettings = new EmailSettings();//Регистрация реализации обработчика заказов
-
+            kernel.Bind<IGameRepository>().To<DbGameRepository>();
+            kernel.Bind<ICategoryRepository>().To<DbCategoryRepository>();
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()
                 .WithConstructorArgument("settings", emailSettings);//Регистрация реализации обработчика заказов
         }
