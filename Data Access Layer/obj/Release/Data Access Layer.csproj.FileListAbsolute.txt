@@ -1,0 +1,31 @@
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\Data Access Layer.dll.config
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\Data Access Layer.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\Data Access Layer.pdb
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\EntityFramework.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\Microsoft.Analytics.Interfaces.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\Microsoft.Analytics.Types.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.Helpers.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.Razor.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.WebPages.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\EntityFramework.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.Helpers.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.Razor.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.WebPages.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\ru\System.Web.Helpers.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\ru\System.Web.Mvc.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\ru\System.Web.WebPages.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\bin\Release\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.csproj.CoreCompileInputs.cache
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.csproj.CopyComplete
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.dll
+C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.pdb

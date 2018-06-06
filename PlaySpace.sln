@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaySpace", "PlaySpace\PlaySpace.csproj", "{D031553C-17C3-442C-8253-898D1CBFC689}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "Data Access Layer\Data Access Layer.csproj", "{B236EF1B-24A9-437E-A665-362A118816CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Access Layer", "Business Access Layer\Business Access Layer.csproj", "{1258808F-649C-4AC6-869C-5554708EC52E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D031553C-17C3-442C-8253-898D1CBFC689}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D031553C-17C3-442C-8253-898D1CBFC689}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D031553C-17C3-442C-8253-898D1CBFC689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B236EF1B-24A9-437E-A665-362A118816CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B236EF1B-24A9-437E-A665-362A118816CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B236EF1B-24A9-437E-A665-362A118816CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B236EF1B-24A9-437E-A665-362A118816CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1258808F-649C-4AC6-869C-5554708EC52E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1258808F-649C-4AC6-869C-5554708EC52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1258808F-649C-4AC6-869C-5554708EC52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1258808F-649C-4AC6-869C-5554708EC52E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

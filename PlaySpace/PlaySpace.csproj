@@ -174,12 +174,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Games\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ICategoryRepository.cs" />
-    <Compile Include="Abstract\IGameRepository.cs" />
-    <Compile Include="Abstract\IOrderProcessor.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -193,28 +189,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelpers\PagingHelpers.cs" />
-    <Compile Include="IGameRepository.cs" />
     <Compile Include="Infrastructure\Abstract\CustomRoleProvider.cs" />
     <Compile Include="Infrastructure\Binders\CartModelBinder.cs" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
-    <Compile Include="Models\Authentication.cs" />
-    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\DbCategoryRepository.cs" />
-    <Compile Include="Models\DbGameRepository.cs" />
-    <Compile Include="Models\EmailSettings.cs" />
-    <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameListViewModel.cs" />
-    <Compile Include="Models\ItemKey.cs" />
-    <Compile Include="Models\Key.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\OrdGame.cs" />
     <Compile Include="Models\PagingInfo.cs" />
-    <Compile Include="Models\ShippingDetails.cs" />
-    <Compile Include="Models\Status.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -224,26 +204,27 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Shared\GameSummary.cshtml" />
-    <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Nav\Menu.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Games\Action.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
-    <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Oplata\Index.cshtml" />
     <Content Include="Views\Admin\OrderCheck.cshtml" />
-    <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Oplata\Paid.cshtml" />
+    <Content Include="Views\Games\Action.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
+    <Content Include="Views\Games\List.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Summary.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -254,6 +235,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Infrastructure\Concrete\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business Access Layer\Business Access Layer.csproj">
+      <Project>{1258808f-649c-4ac6-869c-5554708ec52e}</Project>
+      <Name>Business Access Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data Access Layer\Data Access Layer.csproj">
+      <Project>{b236ef1b-24a9-437e-a665-362a118816cf}</Project>
+      <Name>Data Access Layer</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

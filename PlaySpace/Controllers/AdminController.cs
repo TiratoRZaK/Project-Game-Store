@@ -1,4 +1,6 @@
-﻿using PlaySpace.Abstract;
+﻿using Data_Access_Layer.Interfaces;
+using Data_Access_Layer.Entities;
+using Data_Access_Layer.EF;
 using PlaySpace.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -114,7 +116,7 @@ namespace PlaySpace.Controllers
 
         public ActionResult OrderCheck()
         {
-            return View(context.Orders.Include(nameof(Models.User)));
+            return View(context.Orders.Include(nameof(Data_Access_Layer.Entities.User)));
         }
 
         [HttpPost]

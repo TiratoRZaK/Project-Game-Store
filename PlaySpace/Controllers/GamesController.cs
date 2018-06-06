@@ -1,9 +1,12 @@
-﻿using PlaySpace.Abstract;
+﻿using Business_Logic_Layer.Abstract;
 using PlaySpace.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Data_Access_Layer.Entities;
+using Data_Access_Layer.Interfaces;
 using System.Web.Mvc;
 using System.Web.Security;
+using Data_Access_Layer.EF;
 
 namespace PlaySpace.Controllers
 {

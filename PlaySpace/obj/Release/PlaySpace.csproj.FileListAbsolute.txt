@@ -49,13 +49,18 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\roslyn\vbc.exe.conf
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\roslyn\vbc.rsp
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\roslyn\VBCSCompiler.exe
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Castle.Core.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Data Access Layer.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\EntityFramework.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\EntityFramework.SqlServer.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Ninject.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Ninject.Web.Common.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Ninject.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.ValueTuple.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Helpers.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Mvc.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Providers.dll
@@ -64,12 +69,19 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Webpages
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Webpages.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Webpages.Razor.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\WebActivatorEx.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Data Access Layer.pdb
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Data Access Layer.dll.config
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Castle.Core.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\EntityFramework.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\EntityFramework.SqlServer.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.pdb
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Ninject.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Ninject.Web.Common.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Ninject.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.ValueTuple.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Providers.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Razor.xml
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Web.Webpages.xml
@@ -83,16 +95,11 @@ C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Webpa
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Webpages.Razor.resources.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Helpers.resources.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\ru\System.Web.Mvc.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csprojResolveAssemblyReference.cache
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csproj.CoreCompileInputs.cache
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.csproj.CopyComplete
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.dll
 C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\obj\Release\PlaySpace.pdb
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Castle.Core.dll
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.dll
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Threading.Tasks.Extensions.dll
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.ValueTuple.dll
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Castle.Core.xml
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.pdb
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Moq.xml
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.Threading.Tasks.Extensions.xml
-C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\System.ValueTuple.xml
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Business Access Layer.dll
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Business Access Layer.pdb
+C:\Users\RK-PC\Desktop\Новая версия\PlaySpace\bin\Business Access Layer.dll.config

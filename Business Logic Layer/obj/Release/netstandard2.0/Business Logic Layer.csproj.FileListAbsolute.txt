@@ -1,0 +1,29 @@
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\Business Logic Layer.deps.json
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\Business Logic Layer.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\Data Access Layer.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.Mvc.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\EntityFramework.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.Razor.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.WebPages.Razor.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.WebPages.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\Microsoft.Web.Infrastructure.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.WebPages.Deployment.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\Data Access Layer.pdb
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\Data Access Layer.dll.config
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.Mvc.xml
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\EntityFramework.xml
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.Razor.xml
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.WebPages.Razor.xml
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.WebPages.xml
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\System.Web.WebPages.Deployment.xml
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\ru\System.Web.Mvc.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\ru\System.Web.WebPages.Razor.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\ru\System.Web.WebPages.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\ru\System.Web.WebPages.Deployment.resources.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\obj\Release\netstandard2.0\Business Logic Layer.csprojResolveAssemblyReference.cache
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\obj\Release\netstandard2.0\Business Logic Layer.csproj.CoreCompileInputs.cache
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\obj\Release\netstandard2.0\Business Logic Layer.AssemblyInfoInputs.cache
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\obj\Release\netstandard2.0\Business Logic Layer.AssemblyInfo.cs
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\obj\Release\netstandard2.0\Business Logic Layer.csproj.CopyComplete
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\bin\Release\netstandard2.0\PlaySpace.dll
+C:\Users\RK-PC\Desktop\Новая версия\Business Logic Layer\obj\Release\netstandard2.0\Business Logic Layer.csproj.ResolveComReference.cache

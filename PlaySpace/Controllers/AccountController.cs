@@ -1,4 +1,6 @@
 ﻿using PlaySpace.Models;
+using Data_Access_Layer.Entities;
+using Data_Access_Layer.EF;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
