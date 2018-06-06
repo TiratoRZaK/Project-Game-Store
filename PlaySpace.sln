@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaySpace", "PlaySpace\Play
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access Layer", "Data Access Layer\Data Access Layer.csproj", "{B236EF1B-24A9-437E-A665-362A118816CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Access Layer", "Business Access Layer\Business Access Layer.csproj", "{1258808F-649C-4AC6-869C-5554708EC52E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Logic Layer", "Business Access Layer\Business Logic Layer.csproj", "{1258808F-649C-4AC6-869C-5554708EC52E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

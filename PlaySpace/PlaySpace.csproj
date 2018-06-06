@@ -237,9 +237,9 @@
     <Folder Include="Infrastructure\Concrete\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business Access Layer\Business Access Layer.csproj">
+    <ProjectReference Include="..\Business Access Layer\Business Logic Layer.csproj">
       <Project>{1258808f-649c-4ac6-869c-5554708ec52e}</Project>
-      <Name>Business Access Layer</Name>
+      <Name>Business Logic Layer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Data Access Layer\Data Access Layer.csproj">
       <Project>{b236ef1b-24a9-437e-a665-362a118816cf}</Project>
