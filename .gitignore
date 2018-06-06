@@ -4,3 +4,5 @@
 
 /.vs/PlaySpace/v15
 /PlaySpace/obj/Release
+/Data Access Layer/obj/Release
+/Business Access Layer/obj/Release
