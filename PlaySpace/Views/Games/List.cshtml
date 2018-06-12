@@ -7,9 +7,9 @@
 }
 
 <div class="sorting center">
-    <ul class="s-category clearfix" style="font-family: 'Times New Roman'; font-weight: 600;">
+    @*<ul class="s-category clearfix" style="font-family: 'Times New Roman'; font-weight: 600;">
         @Html.Action("Menu", "Nav")
-    </ul>
+    </ul>*@
     <div class="s-list">
         @if (Model.CurrentSort == 1)
         {
@@ -21,23 +21,16 @@
         }
     </div>
 </div>
-<div class="middle center clearfix">
-    <div class="sidebar">
-        @if (Model.Games != null)
-        {
-            <h1>Самое выгодное предложение на сегодня!!!</h1>
-            @Html.Action("Action", new { model = Model })
-        }
-    </div>
-    <div class="product-catalog">
-        @foreach (var p in @Model.Games)
+<div class="sectionBody">
+    <div class="itemBody">
+         @foreach (var p in @Model.Games)
         {
 
             @Html.Partial("GameSummary", p)
         }
-    </div>
-</div>
-<footer id="page">
+        <footer id="page">
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
                  new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
 </footer>
+    </div>
+</div>

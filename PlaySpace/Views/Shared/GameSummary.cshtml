@@ -1,51 +1,117 @@
 ﻿@model Data_Access_Layer.Entities.Game
 
 <a href="/Games/Index/@Model.GameId">
-    <div class="box-thumb">
+    <div class="itemstory">
+        <div class="itemTop">
+            <span class="btn">@Model.Discount%</span>
+            <span class="itemCategory">
+                Категория: @Model.Category.CategoryName
+            </span>
+        </div>
         @if (Model.ImageData == null)
         {
-            <div class="p-img">
+            <div class="itemImg" style="background-size: 160%; background-size: 100%;">
                 <img src="~/Content/Images/no.png" alt="" />
             </div>
         }
         else
         {
-            <div class="p-img">
+            <div class="itemImg" style="background-size: 160%; background-size: 100%;">
                 <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" />
             </div>
         }
-        <div class="descript">
-            <div class="p-footer clearfix">
-                <h6>@Model.Name</h6>
-                <p><strong>@Model.Discription</strong></p>
+        <div class="itemTitle">
+            <h3><a href="/Games/Index/@Model.GameId">@Model.Name</a></h3>
+        </div>
+        <div class="itemDescr">
+            @Model.Discription
+        </div>
+        <div class="itemButton">
+            @if (Model.Discount != 0)
+    {
+        <span class="itemComm">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
+//<span class="itemComm">@(Model.Discount)%</span>
+}
+else
+{
+        <span class="itemComm">@Model.Price.ToString("# руб")</span>
+}
+            @if (Model.CountKeys > 0)
+    {
+        if (User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("В корзину","AddToCart", "Cart",  new { gameId = Model.GameId, returnUrl = Request.Url.PathAndQuery }, new { @class = "itemMore"} );
+            
+            @*using (Html.BeginForm("AddToCart", "Cart"))
+            {
+                <div class="itemMore">
+                    @Html.HiddenFor(x => x.GameId)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" value="В корзину" />
 
-                <div class="p-footer-price">
-                    @if (Model.Discount != 0)
-                    {
-                        <span class="price-lg">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
-                        <span class="discount">@(Model.Discount)%</span>
-                    }
-                    else
-                    {
-                        <span class="price">@Model.Price.ToString("# руб")</span>
-                    }
-                    @if (Model.CountKeys > 0)
-                    {
-                        using (Html.BeginForm("AddToCart", "Cart"))
-                        {
-                            <div class="add-cart right">
-                                @Html.HiddenFor(x => x.GameId)
-                                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                                <input type="submit" value="В корзину" />
-                            </div>
-                        }
-                    }
-                    else
-                    {
-                        <small class="not-key clearfix right"><strong>Нет в наличии</strong></small>
-                    }
                 </div>
-            </div>
+
+            }*@
+        }
+        else
+        {
+                <div class="itemMore">
+                    Авторизуйтесь
+                </div>
+        }
+        }
+        else
+        {
+                <small class="itemMore right"><strong>Нет в наличии</strong></small>
+        }
         </div>
     </div>
 </a>
+
+@*<div class="box-thumb">
+    @if (Model.ImageData == null)
+    {
+        <div class="p-img">
+            <img src="~/Content/Images/no.png" alt="" />
+        </div>
+    }
+    else
+    {
+        <div class="p-img">
+            <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" />
+        </div>
+    }
+    <div class="descript">
+        <div class="p-footer clearfix">
+            <h6>@Model.Name</h6>
+            <p><strong>@Model.Discription</strong></p>
+
+            <div class="p-footer-price">
+                @if (Model.Discount != 0)
+                {
+                    <span class="price-lg">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
+                    <span class="discount">@(Model.Discount)%</span>
+                }
+                else
+                {
+                    <span class="price">@Model.Price.ToString("# руб")</span>
+                }
+                @if (Model.CountKeys > 0)
+                {
+                    using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        <div class="add-cart right">
+                            @Html.HiddenFor(x => x.GameId)
+                            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                            <input type="submit" value="В корзину" />
+                        </div>
+                    }
+                }
+                else
+                {
+                    <small class="not-key clearfix right"><strong>Нет в наличии</strong></small>
+                }
+            </div>
+        </div>
+    </div>
+</div>*@

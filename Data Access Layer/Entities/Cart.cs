@@ -9,7 +9,7 @@ namespace Data_Access_Layer.Entities
 {
     public class Cart
     {
-        public static int TotalQuantity=0;
+        public static int TotalQuantity = 0;
         private List<CartLine> lineCollection = new List<CartLine>();
 
         public void AddItem(Game game, int quantity)

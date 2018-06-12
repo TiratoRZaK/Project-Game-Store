@@ -1,63 +1,270 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@*<!DOCTYPE html>
+    <html>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-    <link rel="stylesheet" media="all" type="text/css" href="style.css" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div id="wrapper">
-        <div class="panel-top">
-            <div class="center clearfix">
-                <div class="basket">
-                    <a href="/Cart/Index" class=""<span> Корзина(@Html.Action("Summary", "Cart")) </span></a>
-                </div>
-                <div class="acc">
-                    @if (!User.Identity.IsAuthenticated)
-                    {
-                        <a href="/Account/Register" class="p-t-acc">Зарегистрироваться</a>
-                    }
-                </div>
-            </div>
-        </div>
-        <div id="header" class="center clearfix">
-            <div id="logo" class="left">
-                <a href="/Games/List">
-                    <img src="~/Content/Images/logo.png" height="60" width="61" alt="" />
-                    <span>Play Space</span>
-                </a>
-            </div>
-            <ul class="nav right clearfix" style="font-family: 'Times New Roman';">
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li>@Html.ActionLink("Профиль", "Index", "Account")</li>
-                }
-                <li><a href="/Games/List">Каталог</a></li>
-                @if (User.IsInRole("admin"))
-                {
-                    <li>@Html.ActionLink("Заказы", "OrderCheck", "Admin")</li>
-                    <li><a href="/Category/Index">Админ-панель</a></li>
-                }
-            </ul>
-        </div>
-        <div id="home">
-            <div class="home-bg">
-                <div class="center">
-                    <h2 class="title-home">Твоё любимое пространство</h2>
-                    <div class="login">
-                        @Html.Partial("_LoginPartial")
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+        <link rel="stylesheet" media="all" type="text/css" href="style.css" />
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="panel-top">
+                <div class="center clearfix">
+                    <div class="basket">
+                        <a href="/Cart/Index" class=""<span> Корзина(@Html.Action("Summary", "Cart")) </span></a>
+                    </div>
+                    <div class="acc">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a href="/Account/Register" class="p-t-acc">Зарегистрироваться</a>
+                        }
                     </div>
                 </div>
-
             </div>
+            <div id="header" class="center clearfix">
+                <div id="logo" class="left">
+                    <a href="/Games/List">
+                        <img src="~/Content/Images/logo.png" height="60" width="61" alt="" />
+                        <span>Play Space</span>
+                    </a>
+                </div>
+                <ul class="nav right clearfix" style="font-family: 'Times New Roman';">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Профиль", "Index", "Account")</li>
+                    }
+                    <li><a href="/Games/List">Каталог</a></li>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li>@Html.ActionLink("Заказы", "OrderCheck", "Admin")</li>
+                        <li><a href="/Category/Index">Админ-панель</a></li>
+                    }
+                </ul>
+            </div>
+            <div id="home">
+                <div class="home-bg">
+                    <div class="center">
+                        <h2 class="title-home">Твоё любимое пространство</h2>
+                        <div class="login">
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            @RenderBody()
         </div>
+    </body>
+    </html>*@
+
+
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <title>[TITLE]</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <!--styles-->
+
+    <link href="~/Content/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/fonts.css" rel="stylesheet" />
+    <link href="~/Content/media-queries.css" rel="stylesheet" />
+    <link href="~/Content/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <!--/styles-->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <!-- <header> -->
+        <header>
+            <div class="headerTop">
+                @if (!User.Identity.IsAuthenticated)
+                        {
+                           <a href="/Account/Register" class="btn">Зарегистрироваться</a>
+                        }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="modal_toggle"><span>Привет, @User.Identity.Name!</span></div>
+                    using (Html.BeginForm("Logout", "Account", FormMethod.Post))
+                    {
+                        <button id="modal_toggle" class="btn">Выйти</button>
+                    }
+                }
+                else
+                {
+                    <div class="modal_toggle"><span>Привет, гость!</span></div>
+                    <div><span><a href="/Account/Login" class="btn">Войти</a></span></div>
+                }
+
+               
+            </div>
+            <div class="headerCenter">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="/Games/List">
+                        <img src="~/Content/Images/logol.png" alt="" />
+                    </a>
+                </div>
+                <!-- /logo -->
+                <!-- topNav -->
+                <div class="topNav">
+                    <ul>
+                        <li><a href="/" class="home">Каталог</a></li>
+                        @if (User.Identity.IsAuthenticated)
+            {
+                <li class="icon-user">@Html.ActionLink("Профиль", "Index", "Account")</li>
+}
+                        @if (User.IsInRole("admin"))
+            {
+                <li>@Html.ActionLink("Заказы", "OrderCheck", "Admin")</li>
+                <li><a href="/Category/Index">Админ-панель</a></li>
+}
+
+                    </ul>
+                </div>
+                <!-- /topNav -->
+            </div>
+
+            <div class="headerBotton">
+                <!-- nav -->
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="#"><span class="carret"></span>Новости</a>
+                            <ul class="subcats">
+                                <li><a href="#">Название категории</a></li>
+                                <li><a href="#">Название категории</a></li>
+                                <li><a href="#">Название категории</a></li>
+                                <li><a href="#">Название категории</a></li>
+                                <li><a href="#">Название категории</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Топ игры</a></li>
+                        <li><a href="#">Игры</a></li>
+                        <li>
+                            <a href="#"><span class="carret"></span>Категории</a>
+                            <ul class="subcats">
+                                @Html.Action("Menu", "Nav")
+                            </ul>
+                        </li>
+                        <li><a href="#">Рейтинговые</a></li>
+                    </ul>
+                </div>
+                <!-- /nav -->
+                <!-- search -->
+                <div class="search">
+                    <?if($SEARCH_FORM$)?>
+                    <form class="searchForm" onsubmit="document.getElementById('sfSbm').disabled=true" method="get" action="/search/">
+                        <input type="text" name="q" maxlength="240" value="Поиск..." onclick="if (this.value=='Поиск...'){this.value='';}" />
+                        <input type="submit" value="Найти" />
+                        <input type="hidden" name="t" value="0" />
+                    </form>
+                    <?endif?>
+                </div>
+                <!-- /search -->
+            </div>
+        </header>
+        <!-- </header> -->
         @RenderBody()
+        <!-- <footer> -->
+        ГРАНЬ
+        <footer>
+            <div class="f_top">
+                Информация для пользователей
+            </div>
+            <div class="f_middle">
+                <div class="f_middle_bl">
+                    <div class="f_middle_bl_title">Дополнительно</div>
+                    <ul class="footerNav">
+                        <li><a href="#">Правила сайта</a></li>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                        <li><a href="#">Политика Безопасности</a></li>
+                        <li><a href="#">Наши приоритеты</a></li>
+                    </ul>
+                </div>
+                <div class="f_middle_bl">
+                    <div class="f_middle_bl_title">Служба поддержки</div>
+                    <ul class="footerNav">
+                        <li><a href="#">Skype: dj-spawn32</a></li>
+                        <li><a href="#">Email: qwaseres@gmail.com</a></li>
+                        <li><a href="/index/0-3">Обратная связь</a></li>
+                        <li><a href="/sitemap.xml">Карта сайта</a></li>
+                    </ul>
+                </div>
+                <div class="f_middle_bl">
+                    <div class="f_middle_bl_title2">Новое на канале</div>
+                    <div class="videoWrapper">
+                        <iframe width="272" height="153" src="https://www.youtube.com/embed/aLJrETMewyU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="f_middle_bl">
+                    <a href="#" class="sponsor"><img src="/images/sponsors/sponsor-1.png" alt=""></a>
+                    <a href="#" class="sponsor"><img src="/images/sponsors/sponsor-2.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="f_bottom">
+                <div class="f_bottomLeft">
+                    <div class="f_logo">
+                        <a href="/"><img src="/images/f_logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="f_bottomMiddle">
+                    <div class="f_copy">
+                        <p>Copyright GameStore © 2016 | $POWERED_BY$</p>
+                    </div>
+                </div>
+                <div class="f_bottomRight">
+                    <div class="f_count">
+                        <img src="/hit.gif" alt="">
+                        <img src="/hit.gif" alt="">
+                        <img src="/hit.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- </footer> -->
     </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/owl.carousel.js"></script>
+    <script src="/js/tabs.min.js"></script>
+    <?if($GROUP_ID$="4")?>
+    <style type="text/css">
+        .copy-des {
+            display: none !important
+        }
+
+        .f_bottom {
+            padding-right: 25px
+        }
+    </style><?endif?>
 </body>
 </html>
+

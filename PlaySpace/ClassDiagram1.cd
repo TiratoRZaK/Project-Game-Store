@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Data_Access_Layer.Entities.LoginModel" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.RegisterModel" Collapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Cart">
+    <Position X="11.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Lines" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.CartLine">
+    <Position X="3.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Category">
+    <Position X="6.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Game">
+    <Position X="6.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Keys" />
+      <Property Name="Category" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.ItemKey">
+    <Position X="1" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="OrdGame" />
+      <Property Name="Keys" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Key">
+    <Position X="3.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Order">
+    <Position X="5.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.OrdGame">
+    <Position X="1.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="ItemKeys" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Status">
+    <Position X="8.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.User">
+    <Position X="3.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Role" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Data_Access_Layer.Entities.Role">
+    <Position X="0.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data_Access_Layer.EF.UserContext">
+    <Position X="13.75" Y="8" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data_Access_Layer.Repositories.DbCategoryRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Data_Access_Layer.Repositories.DbGameRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Business_Logic_Layer.Models.EmailSettings" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Business_Logic_Layer.Models.EmailOrderProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Business_Logic_Layer.Models.ShippingDetails" Collapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PlaySpace.Controllers.AccountController">
+    <Position X="18.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAIAAAABAAAAAAEQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.Controllers.AdminController">
+    <Position X="15" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAAAAEAAFECAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdminController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Field Name="repository" />
+      <Field Name="repositoryC" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.Controllers.CartController">
+    <Position X="9.75" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAgAAAABAAAAAAAAEEAAAAAAAAAAEEAAAAAACA=</HashCode>
+      <FileName>Controllers\CartController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Field Name="orderProcessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.Controllers.CategoryController">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAAAAEAAEEAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CategoryController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Field Name="repository" />
+      <Field Name="repositoryC" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.Controllers.GamesController">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAQAAAAAAAAAAEAAAAAABY=</HashCode>
+      <FileName>Controllers\GamesController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Field Name="repository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.Controllers.NavController" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\NavController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaySpace.Controllers.OplataController">
+    <Position X="16.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAACAEEAAAAAAAA=</HashCode>
+      <FileName>Controllers\OplataController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Field Name="orderProcessor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.HtmlHelpers.PagingHelpers" Collapsed="true">
+    <Position X="27.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HtmlHelpers\PagingHelpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaySpace.Infrastructure.Abstract.CustomRoleProvider">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEEAAwAAAEAAAAAAAABAAAAAAAAAIAAAAEAAEQAAA=</HashCode>
+      <FileName>Infrastructure\Abstract\CustomRoleProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaySpace.Infrastructure.Binders.CartModelBinder">
+    <Position X="4" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Binders\CartModelBinder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sessionKey" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlaySpace.Models.PagingInfo">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Models\PagingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaySpace.Models.GameListViewModel">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GameListViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Games" />
+      <Property Name="PagingInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PlaySpace.Models.CartIndexViewModel" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAQAAAAAAAAAAAAAAAAAAAAQAAgIAAAAAAAA=</HashCode>
+      <FileName>Models\CartIndexViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Data.Entity.DbSet&lt;TEntity&gt;" Collapsed="true">
+    <Position X="11.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.String" Collapsed="true">
+    <Position X="1.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Business_Logic_Layer.Abstract.IOrderProcessor">
+    <Position X="13" Y="13.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="System.Collections.Generic.ICollection&lt;T&gt;" Collapsed="true">
+    <Position X="8" Y="10.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="System.Collections.Generic.IEnumerable&lt;T&gt;" Collapsed="true">
+    <Position X="9.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Data_Access_Layer.Interfaces.IGameRepository" Collapsed="true">
+    <Position X="16.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Data_Access_Layer.Interfaces.ICategoryRepository" Collapsed="true">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="System.Linq.IQueryable&lt;T&gt;" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
