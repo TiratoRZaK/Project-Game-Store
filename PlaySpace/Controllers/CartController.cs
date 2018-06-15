@@ -120,5 +120,19 @@ namespace PlaySpace.Controllers
                 return View();
             }
         }
+
+        public ActionResult CancelOrder(int orderId)
+        {
+            context.Orders.Remove(context.Orders.First(m=>m.Id == orderId));
+            context.SaveChanges();
+            return RedirectToAction("List","Games");
+        }
+
+        public ActionResult DeleteOrder(int orderId)
+        {
+            context.Orders.Remove(context.Orders.First(m => m.Id == orderId));
+            context.SaveChanges();
+            return RedirectToAction("OrderCheck", "Admin");
+        }
     }
 }

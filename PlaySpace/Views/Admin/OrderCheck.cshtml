@@ -5,57 +5,87 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="center" , style="color: black; font-size: 22px; border-radius: 5px; text-align: center; background-color: white; margin-bottom: 20px;">Заказы на @DateTime.Now</h1>
 
-<table class="table center", style="font-family: 'Times New Roman';">
-    <tr>
-        <th>
-            ID заказа
-        </th>
-        <th>
-            Статус заказа
-        </th>
-        <th>
-            Дата оплаты
-        </th>
-        <th>
-            Email покупателя
-        </th>
-        <th>
-            Дата заказа
-        </th>
-        <th>
-            Общая стоимость
-        </th>
-    </tr>
+<div class="container">
+    <!-- Основная секция -->
+    <section>
+        <div class="sectionTop">
+            <span class="sectionTitle">Список заказов</span>
+            <span class="gameIcn"></span>
+        </div>
+        <div class="sectionBody">
+            <div class="itemBody" style="width:100%">
+                <!-- <body> -->
+                <div align="left" style="font-size: 18pt; color: white;"><!--<s5170>-->Найдено <b>@Model.Count()</b> заказов<!--</s>--></div><br />
+                <div align="center">
+                     <h1 class="center" , style="color: black; font-size: 22px; border-radius: 5px; text-align: center; background-color: white; margin-bottom: 20px;">Заказы на @DateTime.Now</h1>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>               
-                @Html.DisplayFor(modelItem => item.StatusId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataPay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Data)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AllPrice)
-            </td>
-        </tr>
-    }
-</table>
-<div class="center" style="margin-top: 20px;">
-    @Html.ActionLink("Вернуться к каталогу", "List", "Games", null, new
-    {
-        @class = "btn btn-default"
-    })
+                    <table class="table center", style="font-family: 'Times New Roman'; border: 1px solid grey; width: 70%; color: white; font-size: 12pt;">
+                        <tr style="border: 1px solid grey;">
+                            <th style="border: 1px solid grey;">
+                                ID заказа
+                            </th>
+                            <th style="border: 1px solid grey;">
+                                Статус заказа
+                            </th>
+                            <th style="border: 1px solid grey;">
+                                Дата оплаты
+                            </th>
+                            <th style="border: 1px solid grey;">
+                                Email покупателя
+                            </th>
+                            <th style="border: 1px solid grey;">
+                                Дата заказа
+                            </th>
+                            <th style="border: 1px solid grey;">
+                                Общая стоимость
+                            </th>
+                            <th style="border: 1px solid grey;">
+                                Действия
+                            </th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="border: 1px solid grey;">
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </td>
+                                <td style="border: 1px solid grey;">
+                                    @Html.DisplayFor(modelItem => item.StatusId)
+                                </td>
+                                <td style="border: 1px solid grey;">
+                                    @Html.DisplayFor(modelItem => item.DataPay)
+                                </td>
+                                <td style="border: 1px solid grey;">
+                                    @Html.DisplayFor(modelItem => item.User.Email)
+                                </td>
+                                <td style="border: 1px solid grey;">
+                                    @Html.DisplayFor(modelItem => item.Data)
+                                </td>
+                                <td style="border: 1px solid grey;">
+                                    @Html.DisplayFor(modelItem => item.AllPrice)
+                                </td>
+                                <td style="border: 1px solid grey;">
+                                    @Html.ActionLink("Удалить заказ", "DeleteOrder", "Cart", new { orderId = item.Id }, new { @style = "margin-bottom: 30px;" })
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    </div><br />
+                <!-- </body> -->
+            </div>
+            <div class="itemBody"></div>
+        </div>
+        <div class="center" style="margin-top: 20px;">
+            @Html.ActionLink("Вернуться к каталогу", "List", "Games", null, new
+            {
+                @class = "btn btn-default",
+                @style = "margin-bottom: 10px;"
+            })
 </div>
+    </section>
+</div>
+<script src="/js/common.js"></script>
+<script src="/js/owl.carousel.js"></script>
+<script src="/js/tabs.min.js"></script>

@@ -4,23 +4,28 @@
     ViewBag.Title = "Оплата заказа";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Оплата товара @Model.Id</h2>
+<div class="container" style="color: white; line-height: 1.5; text-align: center;">
+    <h2 style="text-align: center; font-size: 20pt;">Оплата заказа : №@Model.Id</h2>
 
-<div class="center">
-    <h2 style="text-align:center; color: black">Выберите способ оплаты:</h2>
-    <div style="margin-left: 18%">
-        <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
-            <input type="hidden" name="receiver" value="410013969614361">
-            <input type="hidden" name="formcomment" value="Play Space: Магазин компьютерных игр">
-            <input type="hidden" name="short-dest" value="Покупка игр на сайте Play Space">
-            <input type="hidden" name="label" value="@Model.Id">
-            <input type="hidden" name="quickpay-form" value="shop">
-            <input type="hidden" name="targets" value="Оплата заказа №@Model.Id">
-            <input type="hidden" name="sum" value="@Model.AllPrice" data-type="number">
-            <label><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label>
-            <label><input type="radio" name="paymentType" value="AC">Банковской картой</label>
-            <input type="hidden" name="successURL" value="http://playspace.info/Oplata/Paid/@Model.Id">
-            <input type="submit" value="Оплатить">
-        </form>
+    <div>
+        <h2 style="text-align:center; font-size: 18pt;">Выберите способ оплаты:</h2>
+        <div style="text-align: center; font-size: 18pt; padding: 30px;">
+            <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+                <input type="hidden" name="receiver" value="410013969614361">
+                <input type="hidden" name="formcomment" value="Play Space: Магазин компьютерных игр">
+                <input type="hidden" name="short-dest" value="Покупка игр на сайте Play Space">
+                <input type="hidden" name="label" value="@Model.Id">
+                <input type="hidden" name="quickpay-form" value="shop">
+                <input type="hidden" name="targets" value="Оплата заказа №@Model.Id">
+                <input type="hidden" name="sum" value="@Model.AllPrice" data-type="number">
+                <input type="radio" name="paymentType" value="PC">   Яндекс.Деньгами
+                <br />
+                <input type="radio" name="paymentType" value="AC">   Банковской картой
+                <br />
+                <input type="hidden" name="successURL" value="http://playspace.info/Oplata/Paid/@Model.Id">
+                <input type="submit" value="Оплатить" style="font-size: 22pt; color: aliceblue; margin-top: 10px;">
+            </form>
+        </div>
+        @Html.ActionLink("Отменить заказ", "CancelOrder", "Cart", new { orderId = Model.Id }, new { @class = "btn_green", @style = "margin-bottom: 30px;" })
     </div>
 </div>

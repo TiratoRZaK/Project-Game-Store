@@ -5,80 +5,88 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="text-align: center; color: black;">@Model.Name</h1>
-
-<div class="row center" style="font-family: 'Times New Roman';">
-    <div class="dl-horizontal">
-        <div style="margin-left: 40%;">
-            @if (Model.ImageData == null)
-            {
-                <div class="p-img">
-                    <img src="~/Content/Images/no.png" alt="" />
-                </div>
-            }
-            else
-            {
-                <div class="p-img">
-                    <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" />
-                </div>
-            }
+<div class="container">
+    <!-- <body> -->
+    <section>
+        <div class="sectionTop">
+            <h2 class="sectionTitleFull">@Model.Name</h2>
         </div>
-        <table align="center" cellpadding="50" cellspacing="50" border="1" height="700">
-            <tr class="well" style="vertical-align: middle;">
-                <td>
-                    @Html.DisplayNameFor(model => model.Category.CategoryName)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.Category.CategoryName)
-                </td>
-            </tr>
-            <tr class="well">
-                <td>
-                    @Html.DisplayNameFor(model => model.Discription)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.Discription)
-                </td>
-            </tr>
-            <tr class="well">
-                <td>
-                    @Html.DisplayNameFor(model => model.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.Price)
-                </td>
-            </tr>
-            <tr class="well">
-                <td>
-                    @Html.DisplayNameFor(model => model.Discount)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.Discount) %
-                </td>
-            </tr>
-        </table>
-    </div>
-    @if (Model.CountKeys > 0)
-    {
-        using (Html.BeginForm("AddToCart", "Cart"))
-        {
-            <div style="margin-top: 50px;">
-                @Html.HiddenFor(x => x.GameId)
-                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                <input class="well" style="float: right; font-size: 35px; width: auto; height: auto;" type="submit" value="В корзину" />
+        <div class="sectionBody">
+            <div class="itemBody" style="width: 100%;">
+                <div class="fullLeft">
+                    <div class="fullPosterBl">
+                        <div class="fullPosterBl_top">
+                            <span class="itemCategory">
+                                <span>Наличие:<b> @Model.CountKeys</b></span>
+                            </span>
+                        </div>
+                        <div class="fullPosterBl_middle">
+                            @if (Model.ImageData == null)
+                            {
+                                <div class="ulightbox">
+                                    <img src="~/Content/Images/no.png" alt="" />
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="ulightbox">
+                                    <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" />
+                                </div>
+                            }
+                        </div>
+                        <div class="fullPosterBl_bottom">
+                            <ul>
+                                <li>Жанр : <span>@Model.Category.CategoryName</span></li>
+                                <li>Год выпуска : <span>2009</span></li>
+                                <li>Цена в рублях: <span>@Model.Price</span></li>
+                                <li>Скидка : <span>@Model.Discount</span></li>
+                                <li>Язык : <span>Russian/English</span></li>
+                                @*<li>Разработчик : <span></span></li>
+                                <li>Дата добавления : <span>$ADD_DATE$ - $ADD_TIME$</span></li>
+                                <li>Просмотров : <span>$READS$</span></li>
+                                <?if($COMMENTS_NUM$)?>
+                                <li>Комментарии : <span>$COMMENTS_NUM$</span></li><?endif?>
+                                <?if($RATING$)?>
+                                <li>Рейтинг : <span>$RATING$ / $RATED$</span></li><?endif?>*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullRight">
+                    <div class="fullDescr">
+                        <div class="fullDescrBl">
+                            <div class="sectionTop">
+                                <span class="sectionTitle">Описание</span>
+                            </div>
+                            <div class="fullDescrBl_content">
+                                @Model.Discription
+                            </div>
+                        </div>
+                    </div>
+                    <div style="float: left;">
+                        @Html.ActionLink("Вернуться к каталогу", "List", null, new
+                        {
+                            @class = "btn_green"
+                            
+                        })
+                    </div>
+                    <div class="fullPosterBl_download">
+                    @if (Model.CountKeys > 0)
+                        {
+                            using (Html.BeginForm("AddToCart", "Cart"))
+                            {
+                                    @Html.HiddenFor(x => x.GameId)
+                                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                                    <input class="btn_green" style="float: right;" type="submit" value="В корзину" />
+                            }
+                        }
+                        else
+                        {
+                            <small class="btn_green"><strong>Нет в наличии</strong></small>
+                        }
+                    </div>
+                </div>
             </div>
-        }
-    }
-    else
-    {
-        <small class="not-key clearfix right" style="font-size: 35px; margin-top: 50px;"><strong>Нет в наличии</strong></small>
-    }
-
-    <div style="margin-top: 50px; float: left;">
-        @Html.ActionLink("Вернуться к каталогу", "List", null, new
-        {
-            @class = "well",
-            @style = "margin-top: 150px; font-size: 35px; width: auto; height: 100px;"
-        })
-    </div>
+        </div>
+    </section>
 </div>

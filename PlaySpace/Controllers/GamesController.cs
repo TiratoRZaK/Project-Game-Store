@@ -17,7 +17,7 @@ namespace PlaySpace.Controllers
         {
             repository = repo;
         }
-        public int pageSize = 9;
+        public int pageSize = 10;
         UserContext context = new UserContext();
 
         public ActionResult Index(int Id)

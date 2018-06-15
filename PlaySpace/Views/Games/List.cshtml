@@ -6,31 +6,49 @@
     ViewBag.Title = "Каталог";
 }
 
-<div class="sorting center">
-    @*<ul class="s-category clearfix" style="font-family: 'Times New Roman'; font-weight: 600;">
-        @Html.Action("Menu", "Nav")
-    </ul>*@
-    <div class="s-list">
-        @if (Model.CurrentSort == 1)
-        {
-            @Html.ActionLink("Цена ↑", "List", "Games", new { category = Model.CurrentCategory, sort = 0 }, new { style = "float:right; font-family: 'Times New Roman';", @class = "sort-price" })
-        }
-        else
-        {
-            @Html.ActionLink("Цена ↓", "List", "Games", new { category = Model.CurrentCategory, sort = 1 }, new { style = "float:right; font-family: 'Times New Roman';", @class = "sort-price" })
-        }
+<section>
+    <div class="sectionTop">
+        <span class="sectionTitle">Каталог игр</span>
+        <span class="gameIcn"></span>
     </div>
-</div>
-<div class="sectionBody">
-    <div class="itemBody">
-         @foreach (var p in @Model.Games)
-        {
+    <div class="headerBotton">
+        <!-- nav -->
+        <div class="nav">
+            <ul>
+                @Html.Action("Menu", "Nav")
+            </ul>
+        </div>
+        <!-- /nav -->
+        <!-- price sort -->
+        <div class="search">
+            <div class="s-list">
+                    @if (Model.CurrentSort == 1)
+                    {
+                        @Html.ActionLink("Цена ↑", "List", "Games", new { category = Model.CurrentCategory, sort = 0 }, new { style = "float:right; font-family: 'Times New Roman'; font-size: 18px; margin-right: 1px; position: relative;background: #1f7e5c ;  -webkit-transition: all 0.3s ease 0s;  transition: all 0.3s ease 0s; padding: 13px;" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Цена ↓", "List", "Games", new { category = Model.CurrentCategory, sort = 1 }, new { style = "float:right; font-family: 'Times New Roman'; font-size: 18px; margin-right: 1px; position: relative;background: #1f7e5c;  -webkit-transition: all 0.3s ease 0s;  transition: all 0.3s ease 0s; padding: 13px;" })
+                    }
+                </div>
+        </div>
+        <!-- /price sort -->
+    </div>
+    <div class="sectionBody">
+        <div class="itemBody">
+            <div class="sectionBody">
+                <div class="itemBody">
+                    @foreach (var p in @Model.Games)
+                    {
 
-            @Html.Partial("GameSummary", p)
-        }
-        <footer id="page">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
-                 new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
-</footer>
+                        @Html.Partial("GameSummary", p)
+                    }
+                </div>
+            </div>
+            <footer id="page">
+                @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+                                                            new { page = x, sort = Model.CurrentSort, category = Model.CurrentCategory }))
+            </footer>
+        </div>
     </div>
-</div>
+</section>

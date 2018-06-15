@@ -3,66 +3,114 @@
 @{
     ViewBag.Title = "Корзина";
 }
+@if (Model.Cart.ComputeTotalValue() != 0)
+{
+    <div class="container">
+        <!-- Основная секция -->
+        <section>
+            <div class="sectionTop">
+                <span class="sectionTitle">Ваша корзина:</span>
+                <span class="gameIcn"></span>
+            </div>
+            <div class="sectionBody">
+                <div class="itemBody" style="width:100%">
+                    <!-- <body> -->
+                    <div align="left" style="font-size: 18pt; color: white;"><!--<s5170>-->В корзине <b>@Html.Action("Summary", "Cart")</b> товаров<!--</s>--></div><br />
+                    <div align="center">
+                        <table class="table center" , style="font-family: 'Times New Roman'; border: 1px solid grey; width: 70%; color: white; font-size: 12pt;">
+                            <tr style="border: 1px solid grey;">
+                                <th style="border: 1px solid grey;">
+                                    Товар
+                                </th>
+                                <th style="border: 1px solid grey;">
+                                    Цена
+                                </th>
+                                <th style="border: 1px solid grey;">
+                                    Скидка
+                                </th>
+                                <th style="border: 1px solid grey;">
+                                    Количество
+                                </th>
+                                <th style="border: 1px solid grey;">
+                                    Итого
+                                </th>
+                                <th></th> 
+                            </tr>
 
-<div class="center c-w">Ваша корзина</div>
-<table class="table center" style="font-family: 'Times New Roman';">
-    <thead>
-        <tr>
-            <th>Кол-во</th>
-            <th>Игра</th>
-            <th class="text-right">Цена</th>
-            <th class="text-right">Скидка</th>
-            <th class="text-right">Общая цена</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var line in Model.Cart.Lines)
-        {
-        <tr>
-            <td class="text-center">@line.Quantity</td>
-            <td class="text-left">@line.Game.Name</td>
-            <td class="text-right">@line.Game.Price.ToString("# руб")</td>
-            @if (line.Game.Discount > 0)
-            {<td class="text-right">@line.Game.Discount %</td>; }else{<td> </td>}
-            <td class="text-right">
-            @((line.Quantity * (line.Game.Price / 100 * (100 - line.Game.Discount))).ToString("# руб"))
-            </td>
-            <td>
-            @using (Html.BeginForm("RemoveFromCart", "Cart"))
-    {
-        @Html.Hidden("GameId", line.Game.GameId)
-        @Html.HiddenFor(x => x.ReturnUrl)
-        <input class="btn" type="submit" value="Удалить" />
+                            @foreach (var item in Model.Cart.Lines)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Game.Name
+                                    </td>
+                                    <td>
+                                        @item.Game.Price.ToString("# руб.")
+                                    </td>
+                                    @if (item.Game.Discount > 0)
+                                    {
+                                    <td>
+                                        @item.Game.Discount %
+                                    </td>
+                                    }
+                                    else
+                                    {
+                                        <td></td>
+                                    }
+                                        <td>
+                                            @item.Quantity
+                                        </td>
+                                        <td>
+                                            @((item.Quantity * (item.Game.Price / 100 * (100 - item.Game.Discount))).ToString("# руб."))
+                                        </td>
+                                    <td>
+                                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                                    {
+                                        @Html.Hidden("GameId", item.Game.GameId)
+                                        @Html.HiddenFor(x => x.ReturnUrl)
+                                        <input class="btn" type="submit" value="Удалить" />
+                                    }
+                                </td>
+                                </tr>
+                            }
+                        </table>
+                        <div  style="font-size: 24pt; color: white; margin-top: 30px; line-height: 1.5;">
+                            <p>Итого:</p>
+                            <div>
+                                @Model.Cart.ComputeTotalValue().ToString("# руб")
+                            </div>
+                        </div>
+                    
+                    </div><br />
+                    <!-- </body> -->
+                </div>
+                <div style="text-align: center;">
+                    @if (Model.ReturnUrl != null)
+                    {
+                        <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупки</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" href="/">Продолжить покупки</a>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Оформить заказ", "Checkout", null, new { @class = "btn btn-primary" })
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" href="/Account/Login">Войти</a>
+                    }
+                </div>
+            </div>
+        </section>
+    </div>
 }
-            </td>
-        </tr>
-        }
-    </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="3" class="text-right">Итого:</td>
-            <td class="text-right">
-                @Model.Cart.ComputeTotalValue().ToString("# руб")
-            </td>
-        </tr>
-    </tfoot>
-</table>
-
-<div class="text-center">
-    @if (Model.ReturnUrl != null)
-    {
-        <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупки</a>
-    }
-    else
-    {
-        <a class="btn btn-primary" href="/">Продолжить покупки</a>
-    }
-    @if (User.Identity.IsAuthenticated)
-    {
-        @Html.ActionLink("Оформить заказ", "Checkout", null, new { @class = "btn btn-primary" })
-    }
-    else
-    {
-        <a class="btn btn-primary" href="/Account/Login">Войти</a>
-    }
-</div>
+else
+{
+    <div class="container">
+        <h1 style="font-size: 48pt; color: white; text-align: center; vertical-align: middle; padding: 50px; line-height: 1.5;">Ваша корзина пуста</h1>
+    </div>
+}
+<script src="/js/common.js"></script>
+<script src="/js/owl.carousel.js"></script>
+<script src="/js/tabs.min.js"></script>

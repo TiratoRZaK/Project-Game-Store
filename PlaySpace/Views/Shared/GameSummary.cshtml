@@ -3,7 +3,6 @@
 <a href="/Games/Index/@Model.GameId">
     <div class="itemstory">
         <div class="itemTop">
-            <span class="btn">@Model.Discount%</span>
             <span class="itemCategory">
                 Категория: @Model.Category.CategoryName
             </span>
@@ -11,61 +10,55 @@
         @if (Model.ImageData == null)
         {
             <div class="itemImg" style="background-size: 160%; background-size: 100%;">
-                <img src="~/Content/Images/no.png" alt="" />
+                <div class="example2">
+                    <img src="~/Content/Images/no.png" class="example_beauty" />
+                    <span>@Model.Discount%</span>
+                </div>
             </div>
-        }
-        else
-        {
+            }
+            else
+            {
             <div class="itemImg" style="background-size: 160%; background-size: 100%;">
-                <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" />
+                <div class="example2">
+                    <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" class="example_beauty" />
+                    <span>@Model.Discount%</span>
+                </div>
             </div>
-        }
-        <div class="itemTitle">
-            <h3><a href="/Games/Index/@Model.GameId">@Model.Name</a></h3>
-        </div>
-        <div class="itemDescr">
-            @Model.Discription
-        </div>
-        <div class="itemButton">
-            @if (Model.Discount != 0)
-    {
-        <span class="itemComm">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
-//<span class="itemComm">@(Model.Discount)%</span>
+            }
+            <div class="itemTitle">
+                <h3><a href="/Games/Index/@Model.GameId">@Model.Name</a></h3>
+            </div>
+            <div class="itemDescr">
+                @Model.Discription
+            </div>
+            <div class="itemButton">
+                @if (Model.Discount != 0)
+        {
+            <span class="itemComm">@(Model.Price / 100 * (100 - Model.Discount)) руб.</span>
 }
 else
 {
         <span class="itemComm">@Model.Price.ToString("# руб")</span>
 }
-            @if (Model.CountKeys > 0)
-    {
-        if (User.Identity.IsAuthenticated)
+                @if (Model.CountKeys > 0)
         {
-            @Html.ActionLink("В корзину","AddToCart", "Cart",  new { gameId = Model.GameId, returnUrl = Request.Url.PathAndQuery }, new { @class = "itemMore"} );
-            
-            @*using (Html.BeginForm("AddToCart", "Cart"))
+            if (User.Identity.IsAuthenticated)
             {
-                <div class="itemMore">
-                    @Html.HiddenFor(x => x.GameId)
-                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                    <input type="submit" value="В корзину" />
-
-                </div>
-
-            }*@
-        }
-        else
-        {
-                <div class="itemMore">
-                    Авторизуйтесь
-                </div>
-        }
-        }
-        else
-        {
-                <small class="itemMore right"><strong>Нет в наличии</strong></small>
-        }
+                @Html.ActionLink("В корзину", "AddToCart", "Cart", new { gameId = Model.GameId, returnUrl = Request.Url.PathAndQuery }, new { @class = "itemMore" });
+    }
+    else
+    {
+        <div class="itemMore">
+            Авторизуйтесь
         </div>
-    </div>
+}
+}
+else
+{
+        <small class="itemMore right"><strong>Нет в наличии</strong></small>
+}
+            </div>
+        </div>
 </a>
 
 @*<div class="box-thumb">
@@ -115,3 +108,4 @@ else
         </div>
     </div>
 </div>*@
+

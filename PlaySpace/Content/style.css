@@ -1,20 +1,3 @@
-/*==============================================================
-Theme: GameStore
-Version: 1.0
-Content Management System (CMS): uCoz Web Service
-Date Coding: 21.12.2015
-Graphics Designed Layout: Aston_San
-Coding Designed: Buger
-Coding Designed from Site: www.art-ucoz.ru
-Graphics Designed Layout from Site: www.art-ucoz.ru (Aston_San)
-URL Graphics Designed Layout: http://art-ucoz.ru/
-URL Link Coding: http://art-ucoz.ru/
-Copyright (c) 2015 Buger & Aston_San
-==============================================================
-(ENG) License: This template is designed by studio ART-UCOZ. It is forbidden extend this template and files related on him, both on commercially and on a nonprofit basis. All rights are reserved.
-(RU) Лицензия: Этот дизайн разработан студией ART-UCOZ. Запрещены к распространению шаблон и графические файлы, относящиеся к нему, как на коммерческой так и на некоммерческой основе. Все права защищены и принадлежат разработчику.
-=============================================================
-*/
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body {font-family: "Cuprum", sans-serif; font-size: 14px; color: #7e7e7e; 
     background-color: #232629;
@@ -65,15 +48,18 @@ button:focus, a:focus, input:focus {outline: 0;}
 .topNav ul li:hover {background: rgb(44, 137, 102);}
 .topNav ul li a.active {background-color: #d75e3f;}
 .topNav ul li a.home:hover {background-color: #e86341;}
-.topNav ul li a span {text-transform:none;}
+    .topNav ul li a span {
+        text-transform: none;
+        margin-top: 30px;
+    }
 
 /* ICON NAV
 -----------------------------------------------------*/
-.home {background:#d75e3f url(../Content/Images/home.png) no-repeat center 25px;}
-.icon-user {background: url(../Content/Images/nouser.png) no-repeat center -110px;}
-.icon-ibox {background: url(../Content/Images/sprites.png) no-repeat center -247px;}
-.icon-PlayStation {background: url(../Content/Images/sprites.png) no-repeat center -384px;}
-.icon-Origin {background: url(../Content/Images/sprites.png) no-repeat center -522px;}
+.home {background: url(../Content/images/home.png) no-repeat center;}
+.icon-user {background: url(../Content/images/profil.png) no-repeat center;}
+.icon-order {background: url(../Content/images/order.png) no-repeat center;}
+.icon-admin {background: url(../Content/images/admin.png) no-repeat center;}
+.icon-cart {background: url(../Content/images/cart.png) no-repeat center;}
 
 .headerBotton {margin-bottom: 18px; position: relative; display: block; width: 100%; clear: both;}
 
@@ -169,7 +155,7 @@ span.gameIcn {width: 41px; height: 41px; background:#1f7e5c url(../Content/Image
 .itemstory:hover {background: rgba(68, 68, 68, 0.8);}
 .itemstory:first-child {float: left; width: 228px; margin-left:0px;}
 .itemstory:nth-child(6n) {float: left; width: 232px; margin-left:0px;}
-.itemTop {background: #2a2a2a; border-bottom: 2px solid #d75e3f; padding: 7px; clear: both}
+.itemTop {background: #2a2a2a; border-bottom: 2px solid #d75e3f; padding: 7px; clear: both; height: 30px;}
 .platform {color: #fff;}
 .itemCategory {color: #d75e3f; float: right;}
 .itemImg {overflow: hidden; height: 200px; background-position: center; background-repeat: no-repeat; margin-bottom: 2px; clear: both}
@@ -262,7 +248,7 @@ a.sponsor img {width: 100%;height: 100%;  display: block;}
 .modal_close {display: inline-block; position: absolute; top: -20px; right: -20px; background: #d75e3f !important;cursor: pointer; width: 40px; height: 40px; line-height: 40px; font-family: Arial, sans-serif; font-size: 16px; color: #fefefe;}
 .modal h2 { border-bottom: 1px dotted #1f7e5c; padding-bottom: 15px; margin-bottom: 15px; font-weight: normal; text-transform: uppercase; font-size: 14px; color: #fefefe}
 .modal p {margin-bottom: 15px; font-size: 14px;  color:  rgba(254, 254, 254, 0.50); padding:0 10px;}
-.modal_content {text-align: left; display: block; position: relative; clear: both;min-width: 240px;}
+.modal_content { display: block; position: relative; clear: both;min-width: 240px;}
 .btn_bl {text-align: center; padding-bottom: 15px;}
 .submit_bl {text-align: center;}
 .u_input {margin-bottom: 15px;border: 1px solid #d75e3f;}
@@ -375,3 +361,39 @@ input.manFlScreen[type="file"]{color: rgba(255, 255, 255, 0.49) !important;}
     display: none;
 }
 hr, .manHr {opacity: 0.08;}
+
+
+
+.price-block {
+    background: url(images/b_price.png) no-repeat 0 0;
+    width: 95px;
+    height: 30px;
+    position: absolute;
+    right: -27px;
+    top: 4px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.price-block {
+    background: url(/Content/images/b_price.png) no-repeat 0 0;
+    width: 95px;
+    height: 30px;
+    position: absolute;
+    right: -27px;
+    top: 4px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
