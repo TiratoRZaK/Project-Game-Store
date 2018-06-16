@@ -1,8 +1,8 @@
-﻿using Data_Access_Layer.Entities;
-using Business_Logic_Layer.Models;
+﻿using PlaySpace.Entities;
+using PlaySpace.Models;
 
 
-namespace Business_Logic_Layer.Abstract
+namespace PlaySpace.Abstract
 {
     public interface IOrderProcessor
     {

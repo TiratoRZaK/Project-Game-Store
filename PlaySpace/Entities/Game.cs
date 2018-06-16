@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
-namespace Data_Access_Layer.Entities
+namespace PlaySpace.Entities
 {
     public class Game
     {

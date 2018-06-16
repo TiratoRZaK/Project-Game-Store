@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Data_Access_Layer.Entities;
+using PlaySpace.Entities;
 using System.Web;
 
 namespace PlaySpace.Models

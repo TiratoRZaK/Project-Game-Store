@@ -192,6 +192,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IOrderProcessor.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -201,6 +202,17 @@
     <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Controllers\OplataController.cs" />
+    <Compile Include="EF\UserContext.cs" />
+    <Compile Include="Entities\Authentication.cs" />
+    <Compile Include="Entities\Cart.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Game.cs" />
+    <Compile Include="Entities\ItemKey.cs" />
+    <Compile Include="Entities\Key.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrdGame.cs" />
+    <Compile Include="Entities\Status.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,9 +220,15 @@
     <Compile Include="Infrastructure\Abstract\CustomRoleProvider.cs" />
     <Compile Include="Infrastructure\Binders\CartModelBinder.cs" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Interfaces\ICategoryRepository.cs" />
+    <Compile Include="Interfaces\IGameRepository.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
+    <Compile Include="Models\EmailSettings.cs" />
     <Compile Include="Models\GameListViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
+    <Compile Include="Models\ShippingDetails.cs" />
+    <Compile Include="Repositories\DbCategoryRepository.cs" />
+    <Compile Include="Repositories\DbGameRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -251,16 +269,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Infrastructure\Concrete\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Business Access Layer\Business Logic Layer.csproj">
-      <Project>{1258808f-649c-4ac6-869c-5554708ec52e}</Project>
-      <Name>Business Logic Layer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data Access Layer\Data Access Layer.csproj">
-      <Project>{b236ef1b-24a9-437e-a665-362a118816cf}</Project>
-      <Name>Data Access Layer</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

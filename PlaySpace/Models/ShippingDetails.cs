@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Business_Logic_Layer.Models
+namespace PlaySpace.Models
 {
     public class ShippingDetails
     {

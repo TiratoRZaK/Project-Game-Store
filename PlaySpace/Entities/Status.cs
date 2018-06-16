@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Data_Access_Layer.Entities
+namespace PlaySpace.Entities
 {
     public class Status
     {

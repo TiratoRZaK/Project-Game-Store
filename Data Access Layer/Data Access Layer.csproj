@@ -71,22 +71,7 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EF\UserContext.cs" />
-    <Compile Include="Entities\Authentication.cs" />
-    <Compile Include="Entities\Cart.cs" />
-    <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Game.cs" />
-    <Compile Include="Entities\ItemKey.cs" />
-    <Compile Include="Entities\Key.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrdGame.cs" />
-    <Compile Include="Entities\Status.cs" />
-    <Compile Include="Entities\User.cs" />
-    <Compile Include="Interfaces\ICategoryRepository.cs" />
-    <Compile Include="Interfaces\IGameRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\DbCategoryRepository.cs" />
-    <Compile Include="Repositories\DbGameRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

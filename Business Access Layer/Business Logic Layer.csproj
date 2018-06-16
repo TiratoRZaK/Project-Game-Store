@@ -53,16 +53,7 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IOrderProcessor.cs" />
-    <Compile Include="Models\EmailSettings.cs" />
-    <Compile Include="Models\ShippingDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Data Access Layer\Data Access Layer.csproj">
-      <Project>{b236ef1b-24a9-437e-a665-362a118816cf}</Project>
-      <Name>Data Access Layer</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

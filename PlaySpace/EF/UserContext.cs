@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using Data_Access_Layer.Entities;
+using PlaySpace.Entities;
 
-namespace Data_Access_Layer.EF
+namespace PlaySpace.EF
 {
     public class UserContext : DbContext
     {

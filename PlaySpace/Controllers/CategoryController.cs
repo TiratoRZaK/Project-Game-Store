@@ -1,10 +1,10 @@
-﻿using Business_Logic_Layer.Abstract;
+﻿using PlaySpace.Abstract;
 using PlaySpace.Models;
 using System;
-using Data_Access_Layer.Entities;
-using Data_Access_Layer.Interfaces;
+using PlaySpace.Entities;
+using PlaySpace.Interfaces;
 using System.Collections.Generic;
-using Data_Access_Layer.EF;
+using PlaySpace.EF;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;

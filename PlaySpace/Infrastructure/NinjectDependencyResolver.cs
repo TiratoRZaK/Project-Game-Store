@@ -1,12 +1,12 @@
 ﻿using Moq;
 using Ninject;
-using Business_Logic_Layer.Abstract;
-using Business_Logic_Layer.Models;
-using Data_Access_Layer.Interfaces;
+using PlaySpace.Abstract;
+using PlaySpace.Models;
+using PlaySpace.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using Data_Access_Layer.Repositories;
+using PlaySpace.Repositories;
 
 namespace PlaySpace.Infrastructure
 {
@@ -32,7 +32,7 @@ namespace PlaySpace.Infrastructure
 
         private void AddBindings()
         {
-            Business_Logic_Layer.Models.EmailSettings emailSettings = new EmailSettings();//Регистрация реализации обработчика заказов
+            PlaySpace.Models.EmailSettings emailSettings = new EmailSettings();//Регистрация реализации обработчика заказов
             kernel.Bind<IGameRepository>().To<DbGameRepository>();
             kernel.Bind<ICategoryRepository>().To<DbCategoryRepository>();
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>()

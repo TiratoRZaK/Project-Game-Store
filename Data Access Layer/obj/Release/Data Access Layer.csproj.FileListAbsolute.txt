@@ -29,4 +29,3 @@ C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Dat
 C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.csproj.CopyComplete
 C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.dll
 C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.pdb
-C:\Users\RK-PC\Desktop\Новая версия\Data Access Layer\obj\Release\Data Access Layer.csprojResolveAssemblyReference.cache

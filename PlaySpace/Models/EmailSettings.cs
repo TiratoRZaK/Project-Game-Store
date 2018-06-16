@@ -2,13 +2,13 @@
 using System.Net;
 using System.Net.Mail;
 using System.Linq;
-using Business_Logic_Layer.Abstract;
+using PlaySpace.Abstract;
 using System.Collections.Generic;
-using Data_Access_Layer.Interfaces;
-using Data_Access_Layer.EF;
-using Data_Access_Layer.Entities;
+using PlaySpace.Interfaces;
+using PlaySpace.EF;
+using PlaySpace.Entities;
 
-namespace Business_Logic_Layer.Models
+namespace PlaySpace.Models
 {
     public class EmailSettings
     {

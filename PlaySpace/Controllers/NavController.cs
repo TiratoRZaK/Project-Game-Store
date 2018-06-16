@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Data_Access_Layer.EF;
-using Data_Access_Layer.Entities;
+using PlaySpace.EF;
+using PlaySpace.Entities;
 using System.Web.Mvc;
 
 namespace PlaySpace.Controllers

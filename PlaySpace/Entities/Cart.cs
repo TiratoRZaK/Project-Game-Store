@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Data_Access_Layer.EF;
+using PlaySpace.EF;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Data_Access_Layer.Entities
+namespace PlaySpace.Entities
 {
     public class Cart
     {
