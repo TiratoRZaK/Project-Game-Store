@@ -7,29 +7,29 @@
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA11lIfeo/oUeYAYVeBZ9ruQAAAAACAAAAAAAQZgAAAAEAACAAAAAT0jqEnPy/A0xUhBk3xBXWE9T+RD9KaW93uaNMSVS45QAAAAAOgAAAAAIAACAAAAC8WAn8HzzstE95YeSbI5aGzxp0Y92Q7TRSUk6j0HYLhCAAAAAFXRYp43g1EOPb0ygR1xd49xacZ+IDxiEPYOrp1EZ3QkAAAAD1w+WDkSpfQ8Khk4Lm1YvkKYBaDUYI+KR1ojzTP5ReIdSLh+dRnJi++W7oU6NwFNy1N0Sdvxu93jFaEI1x6rVV</EncryptedPassword>
-    <_PublishTargetUrl>ftp://31.31.196.61/three-layered</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://31.31.196.61/Design</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Business Access Layer.dll">
-      <publishTime>06/08/2018 19:16:06</publishTime>
+      <publishTime>06/15/2018 06:42:34</publishTime>
     </File>
     <File Include="bin/Business Access Layer.dll.config">
       <publishTime>06/06/2018 15:15:44</publishTime>
     </File>
     <File Include="bin/Business Access Layer.pdb">
-      <publishTime>06/08/2018 19:16:06</publishTime>
+      <publishTime>06/15/2018 06:42:34</publishTime>
     </File>
     <File Include="bin/Castle.Core.dll">
       <publishTime>06/06/2018 15:14:43</publishTime>
     </File>
     <File Include="bin/Data Access Layer.dll">
-      <publishTime>06/08/2018 19:16:05</publishTime>
+      <publishTime>06/15/2018 06:42:33</publishTime>
     </File>
     <File Include="bin/Data Access Layer.dll.config">
       <publishTime>06/06/2018 15:15:45</publishTime>
     </File>
     <File Include="bin/Data Access Layer.pdb">
-      <publishTime>06/08/2018 19:16:05</publishTime>
+      <publishTime>06/15/2018 06:42:33</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/20/2018 10:32:21</publishTime>
@@ -59,10 +59,10 @@
       <publishTime>04/20/2018 10:32:23</publishTime>
     </File>
     <File Include="bin/PlaySpace.dll">
-      <publishTime>06/08/2018 19:16:16</publishTime>
+      <publishTime>06/15/2018 06:42:46</publishTime>
     </File>
     <File Include="bin/PlaySpace.pdb">
-      <publishTime>06/08/2018 19:16:16</publishTime>
+      <publishTime>06/15/2018 06:42:46</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>04/20/2018 10:32:22</publishTime>
@@ -256,6 +256,9 @@
     <File Include="bin/WebActivatorEx.dll">
       <publishTime>04/20/2018 10:32:23</publishTime>
     </File>
+    <File Include="ClassDiagram1.cd">
+      <publishTime>06/09/2018 09:22:58</publishTime>
+    </File>
     <File Include="Content/11729.ttf">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
@@ -265,14 +268,56 @@
     <File Include="Content/11764.ttf">
       <publishTime>05/14/2018 22:51:40</publishTime>
     </File>
+    <File Include="Content/animate.min.css">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
     <File Include="Content/bootstrap.css">
       <publishTime>06/06/2018 15:14:21</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
+    <File Include="Content/css/animate.min.css">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/css/fonts.css">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/css/media-queries.css">
+      <publishTime>01/28/2016 14:30:48</publishTime>
+    </File>
+    <File Include="Content/css/owl.carousel.css">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>01/28/2016 12:24:22</publishTime>
+    </File>
     <File Include="Content/Discript-Discount.otf">
       <publishTime>06/06/2018 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts.css">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/fonts/Glyphter.eot">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/fonts/Glyphter.svg">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/fonts/Glyphter.ttf">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/fonts/Glyphter.woff">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/hit.gif">
+      <publishTime>01/28/2016 12:24:22</publishTime>
+    </File>
+    <File Include="Content/images/6_borderlands-2-header.jpg">
+      <publishTime>06/14/2018 21:38:27</publishTime>
+    </File>
+    <File Include="Content/images/admin.png">
+      <publishTime>06/14/2018 23:57:36</publishTime>
     </File>
     <File Include="Content/Images/back.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
@@ -286,29 +331,68 @@
     <File Include="Content/Images/basket.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
+    <File Include="Content/images/b_price.png">
+      <publishTime>06/14/2018 22:00:40</publishTime>
+    </File>
+    <File Include="Content/images/cart.png">
+      <publishTime>06/15/2018 03:16:51</publishTime>
+    </File>
     <File Include="Content/Images/down.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
+    <File Include="Content/images/eyecatcher_rise.jpg">
+      <publishTime>06/14/2018 21:37:32</publishTime>
+    </File>
+    <File Include="Content/images/facion.png">
+      <publishTime>06/14/2018 23:11:48</publishTime>
+    </File>
     <File Include="Content/Images/futuristic-background-6.jpg">
       <publishTime>05/14/2018 22:51:40</publishTime>
+    </File>
+    <File Include="Content/images/gameIcn.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
     </File>
     <File Include="Content/Images/helldivers.jpg">
       <publishTime>05/14/2018 22:51:40</publishTime>
     </File>
     <File Include="Content/Images/home.png">
-      <publishTime>04/20/2018 10:32:20</publishTime>
+      <publishTime>06/14/2018 23:56:59</publishTime>
+    </File>
+    <File Include="Content/images/image_1.jpg">
+      <publishTime>06/14/2018 21:36:41</publishTime>
     </File>
     <File Include="Content/Images/iron2.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
+    <File Include="Content/images/itemIcn.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/images/lkjnrs.jpg">
+      <publishTime>06/14/2018 21:34:10</publishTime>
+    </File>
     <File Include="Content/Images/logo.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
+    </File>
+    <File Include="Content/images/logoTop.png">
+      <publishTime>06/12/2018 15:18:59</publishTime>
     </File>
     <File Include="Content/Images/met.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
+    <File Include="Content/images/nav-sprt.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
     <File Include="Content/Images/new-back.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
+    </File>
+    <File Include="Content/images/nouser.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/images/order.png">
+      <publishTime>06/14/2018 23:27:25</publishTime>
+    </File>
+    <File Include="Content/images/pat.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
     </File>
     <File Include="Content/Images/payday2.png">
       <publishTime>05/14/2018 22:51:40</publishTime>
@@ -316,11 +400,29 @@
     <File Include="Content/Images/portal2.png">
       <publishTime>05/14/2018 22:51:40</publishTime>
     </File>
+    <File Include="Content/images/preview_tron.jpg">
+      <publishTime>06/14/2018 21:32:36</publishTime>
+    </File>
+    <File Include="Content/images/preview_x-men.jpg">
+      <publishTime>06/14/2018 21:31:31</publishTime>
+    </File>
+    <File Include="Content/images/profil.png">
+      <publishTime>06/14/2018 23:27:18</publishTime>
+    </File>
     <File Include="Content/Images/pubg.jpg">
       <publishTime>05/14/2018 22:51:40</publishTime>
     </File>
     <File Include="Content/Images/ramka.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
+    </File>
+    <File Include="Content/images/resident-evil-7-biohazard.jpg">
+      <publishTime>06/14/2018 21:30:33</publishTime>
+    </File>
+    <File Include="Content/images/screenIcn.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/images/searchBtn.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
     </File>
     <File Include="Content/Images/sidebar.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
@@ -337,8 +439,17 @@
     <File Include="Content/Images/sorting.png">
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
+    <File Include="Content/images/sponsors/sponsor-1.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/images/sponsors/sponsor-2.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
     <File Include="Content/Images/spore2.jpg">
       <publishTime>05/14/2018 22:51:40</publishTime>
+    </File>
+    <File Include="Content/images/sprites.png">
+      <publishTime>01/28/2016 12:24:23</publishTime>
     </File>
     <File Include="Content/Images/sr2.png">
       <publishTime>05/14/2018 22:51:40</publishTime>
@@ -352,8 +463,32 @@
     <File Include="Content/Images/фон.jpg">
       <publishTime>06/06/2018 15:13:34</publishTime>
     </File>
+    <File Include="Content/js/common.js">
+      <publishTime>01/28/2016 12:24:24</publishTime>
+    </File>
+    <File Include="Content/js/html5shiv.min.js">
+      <publishTime>01/28/2016 12:24:24</publishTime>
+    </File>
+    <File Include="Content/js/owl.carousel.js">
+      <publishTime>01/28/2016 12:24:24</publishTime>
+    </File>
+    <File Include="Content/js/respond.min.js">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/js/tabs.min.js">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
+    <File Include="Content/media-queries.css">
+      <publishTime>01/28/2016 14:30:48</publishTime>
+    </File>
+    <File Include="Content/owl.carousel.css">
+      <publishTime>01/28/2016 12:24:23</publishTime>
+    </File>
     <File Include="Content/Site.css">
-      <publishTime>06/06/2018 15:14:21</publishTime>
+      <publishTime>06/15/2018 03:08:20</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>06/15/2018 03:21:42</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>04/20/2018 10:32:21</publishTime>
@@ -410,25 +545,25 @@
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
     <File Include="Views/Account/Index.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 01:43:07</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 01:20:57</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 01:19:26</publishTime>
     </File>
     <File Include="Views/Admin/Create.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 06:24:21</publishTime>
     </File>
     <File Include="Views/Admin/Edit.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 06:24:21</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 06:24:21</publishTime>
     </File>
     <File Include="Views/Admin/OrderCheck.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 05:21:48</publishTime>
     </File>
     <File Include="Views/Cart/Checkout.cshtml">
       <publishTime>06/06/2018 15:13:36</publishTime>
@@ -437,25 +572,25 @@
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Cart/Index.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 04:47:37</publishTime>
     </File>
     <File Include="Views/Cart/Summary.cshtml">
       <publishTime>06/06/2018 15:15:46</publishTime>
     </File>
     <File Include="Views/Category/Create.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 06:24:21</publishTime>
     </File>
     <File Include="Views/Category/Index.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 06:24:21</publishTime>
     </File>
     <File Include="Views/Games/Action.cshtml">
       <publishTime>06/06/2018 15:15:46</publishTime>
     </File>
     <File Include="Views/Games/Index.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 02:53:35</publishTime>
     </File>
     <File Include="Views/Games/List.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/14/2018 22:34:20</publishTime>
     </File>
     <File Include="Views/Nav/Menu.cshtml">
       <publishTime>05/02/2018 14:52:38</publishTime>
@@ -464,7 +599,7 @@
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Oplata/Index.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 05:16:24</publishTime>
     </File>
     <File Include="Views/Oplata/Paid.cshtml">
       <publishTime>06/06/2018 15:14:40</publishTime>
@@ -473,7 +608,7 @@
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/Shared/GameSummary.cshtml">
-      <publishTime>06/06/2018 15:15:46</publishTime>
+      <publishTime>06/15/2018 03:09:54</publishTime>
     </File>
     <File Include="Views/Shared/Time.cshtml">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -482,7 +617,7 @@
       <publishTime>06/06/2018 15:14:40</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>06/06/2018 15:14:40</publishTime>
+      <publishTime>06/15/2018 04:02:40</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>06/06/2018 15:14:21</publishTime>
@@ -494,7 +629,7 @@
       <publishTime>04/20/2018 10:32:20</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/08/2018 19:16:32</publishTime>
+      <publishTime>06/15/2018 06:43:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -31,6 +31,7 @@ namespace Data_Access_Layer.Repositories
         public void Create(Game item)
         {
             db.Games.Add(item);
+            db.SaveChanges();
         }
 
         public void Update(Game game)
@@ -71,6 +72,7 @@ namespace Data_Access_Layer.Repositories
             Game game = db.Games.Find(gameId);
             if (game != null)
                 db.Games.Remove(game);
+            db.SaveChanges();
             return game;
         }
 

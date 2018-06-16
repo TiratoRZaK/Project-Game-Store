@@ -12,8 +12,10 @@
             <div class="itemImg" style="background-size: 160%; background-size: 100%;">
                 <div class="example2">
                     <img src="~/Content/Images/no.png" class="example_beauty" />
+                    @if (Model.Discount > 0)
+                    {
                     <span>@Model.Discount%</span>
-                </div>
+                    }                </div>
             </div>
             }
             else
@@ -21,7 +23,10 @@
             <div class="itemImg" style="background-size: 160%; background-size: 100%;">
                 <div class="example2">
                     <img src="@Url.Action("GetImage", "Games", new { Model.GameId })" alt="" class="example_beauty" />
-                    <span>@Model.Discount%</span>
+                    @if (Model.Discount > 0)
+    {
+                <span>@Model.Discount%</span>
+}
                 </div>
             </div>
             }

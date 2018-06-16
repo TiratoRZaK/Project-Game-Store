@@ -40,7 +40,8 @@ namespace PlaySpace.Controllers
         {
             if (ModelState.IsValid)
             {
-                repositoryC.Update(category);
+                repositoryC.Create(category);
+                repositoryC.Save();
                 TempData["message"] = string.Format("Категория \"{0}\" была успешно добавлена", category.CategoryName);
                 return RedirectToAction("Index");
             }

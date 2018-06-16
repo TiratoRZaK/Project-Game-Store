@@ -52,6 +52,7 @@ namespace Data_Access_Layer.Repositories
                 if (item.CategoryId == categoryId)
                 {
                     repository.Delete(item.GameId);
+                    db.SaveChanges();
                 }
             }
             if (dbEntry != null)
